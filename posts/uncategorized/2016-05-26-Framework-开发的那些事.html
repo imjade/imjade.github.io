@@ -6,16 +6,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Framework 开发的那些事 | Jade&#39;s Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This is My Home.">
+  <meta name="description" content="1.static A 嵌套了static B1&amp;gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
+报错：
+error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
+file: /Applica">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Framework 开发的那些事">
 <meta property="og:url" content="http://imjade.github.io/posts/uncategorized/2016-05-26-Framework-开发的那些事.html">
 <meta property="og:site_name" content="Jade's Home">
-<meta property="og:description" content="This is My Home.">
-<meta property="og:updated_time" content="2016-05-26T06:27:43.000Z">
+<meta property="og:description" content="1.static A 嵌套了static B1&amp;gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
+报错：
+error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
+file: /Applica">
+<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/image17CE12794-3913-4CE4-86E3-B6B5470A4F36.png">
+<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/7552CFF2-3577-4874-B18A-F9E1ECE57691.png">
+<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/95441BC2-0D41-4552-8FA9-F0DB4447BB84.png">
+<meta property="og:updated_time" content="2016-05-26T07:49:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Framework 开发的那些事">
-<meta name="twitter:description" content="This is My Home.">
+<meta name="twitter:description" content="1.static A 嵌套了static B1&amp;gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
+报错：
+error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
+file: /Applica">
+<meta name="twitter:image" content="http://o7rvtx931.bkt.clouddn.com/image17CE12794-3913-4CE4-86E3-B6B5470A4F36.png">
   
     <link rel="alternative" href="/atom.xml" title="Jade&#39;s Home" type="application/atom+xml">
   
@@ -208,6 +221,10 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
+	</div>
+
         
 
         <div class="clearfix"></div>
@@ -216,7 +233,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="1-static-A-嵌套了static-B"><a href="#1-static-A-嵌套了static-B" class="headerlink" title="1.static A 嵌套了static B"></a>1.static A 嵌套了static B</h3><pre><code>1&gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
+报错：
+error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
+file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/usr/lib/libz.tbd is not an object file (not allowed in a library)
+</code></pre><p><img src="http://o7rvtx931.bkt.clouddn.com/image17CE12794-3913-4CE4-86E3-B6B5470A4F36.png" alt="报错信息"></p>
+<pre><code>2&gt;.如果不添加dylib就会
+报错：
+ld: framework not found PywSdk for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+</code></pre><p><img src="http://o7rvtx931.bkt.clouddn.com/7552CFF2-3577-4874-B18A-F9E1ECE57691.png" alt="报错信息"><br>    但是staticB中用到了 <a name="fenced-code-block">系统.Framework</a> 可以添加到staticA中<br>    设想：如果staticB中没有用到dylib库应该是可以static嵌套static吧</p>
+<h3 id="2-dynamic-A-嵌套-dynamic-B-static-B"><a href="#2-dynamic-A-嵌套-dynamic-B-static-B" class="headerlink" title="2.dynamic A 嵌套 dynamic B/static B"></a>2.dynamic A 嵌套 dynamic B/static B</h3><pre><code>1&gt;.因为dynamic是系统保存一份的。所以dynamic A中不能使用和一样的文件和全局文件。报文件重复错误，所以dynamicA中文件和全局变量要避免和dynamic B/static B中得一样。要是一定要用一样的文件要修改文件加个前缀。
+报错：
+</code></pre><p><img src="http://o7rvtx931.bkt.clouddn.com/95441BC2-0D41-4552-8FA9-F0DB4447BB84.png" alt="报错信息"></p>
+
       
     </div>
     
