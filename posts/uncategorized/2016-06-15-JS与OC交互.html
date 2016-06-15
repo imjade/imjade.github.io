@@ -4,30 +4,33 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>CocoaPods | Jade&#39;s Home</title>
+  <title>JS与OC交互 | Jade&#39;s Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="cocoapods 安装
-1&amp;gt;.删除官方的ruby环境
-gem sources --remove https://rubygems.org/
-2&amp;gt;.等有反应之后再敲入以下命令
-gem sources -a http://ruby.taobao.org/">
+  <meta name="description" content="参考链接：http://blog.csdn.net/lwjok2007/article/details/47058795 
+添加
+JavaScriptCore.framework
+
+#import &amp;lt;JavaScriptCore/JavaScriptCore.h&amp;gt; 
+js调用iOS分两种情况">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CocoaPods">
-<meta property="og:url" content="http://imjade.github.io/posts/uncategorized/2016-06-06-CocoaPods.html">
+<meta property="og:title" content="JS与OC交互">
+<meta property="og:url" content="http://imjade.github.io/posts/uncategorized/2016-06-15-JS与OC交互.html">
 <meta property="og:site_name" content="Jade's Home">
-<meta property="og:description" content="cocoapods 安装
-1&amp;gt;.删除官方的ruby环境
-gem sources --remove https://rubygems.org/
-2&amp;gt;.等有反应之后再敲入以下命令
-gem sources -a http://ruby.taobao.org/">
-<meta property="og:updated_time" content="2016-06-06T02:42:04.000Z">
+<meta property="og:description" content="参考链接：http://blog.csdn.net/lwjok2007/article/details/47058795 
+添加
+JavaScriptCore.framework
+
+#import &amp;lt;JavaScriptCore/JavaScriptCore.h&amp;gt; 
+js调用iOS分两种情况">
+<meta property="og:updated_time" content="2016-06-15T06:44:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CocoaPods">
-<meta name="twitter:description" content="cocoapods 安装
-1&amp;gt;.删除官方的ruby环境
-gem sources --remove https://rubygems.org/
-2&amp;gt;.等有反应之后再敲入以下命令
-gem sources -a http://ruby.taobao.org/">
+<meta name="twitter:title" content="JS与OC交互">
+<meta name="twitter:description" content="参考链接：http://blog.csdn.net/lwjok2007/article/details/47058795 
+添加
+JavaScriptCore.framework
+
+#import &amp;lt;JavaScriptCore/JavaScriptCore.h&amp;gt; 
+js调用iOS分两种情况">
   
     <link rel="alternative" href="/atom.xml" title="Jade&#39;s Home" type="application/atom+xml">
   
@@ -195,11 +198,11 @@ gem sources -a http://ruby.taobao.org/">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-CocoaPods" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-JS与OC交互" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/posts/uncategorized/2016-06-06-CocoaPods.html" class="article-date">
-  	<time datetime="2016-06-06T02:17:57.000Z" itemprop="datePublished">2016-06-06</time>
+      <a href="/posts/uncategorized/2016-06-15-JS与OC交互.html" class="article-date">
+  	<time datetime="2016-06-15T06:34:01.000Z" itemprop="datePublished">2016-06-15</time>
 </a>
     </div>
   
@@ -212,7 +215,7 @@ gem sources -a http://ruby.taobao.org/">
         
   
     <h1 class="article-title" itemprop="name">
-      CocoaPods
+      JS与OC交互
     </h1>
   
 
@@ -232,35 +235,110 @@ gem sources -a http://ruby.taobao.org/">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a name="fenced-code-block">cocoapods 安装</a></p>
-<p>1&gt;.删除官方的ruby环境</p>
-<pre><code>gem sources --remove https://rubygems.org/
-</code></pre><p>2&gt;.等有反应之后再敲入以下命令</p>
-<pre><code>gem sources -a http://ruby.taobao.org/
-</code></pre><a id="more"></a>
-<p>3&gt;.为了验证你的Ruby镜像是并且仅是taobao</p>
-<pre><code>  gem sources -l
+        <p>参考链接：<a href="http://blog.csdn.net/lwjok2007/article/details/47058795" target="_blank" rel="external">http://blog.csdn.net/lwjok2007/article/details/47058795 </a></p>
+<pre><code>添加
+JavaScriptCore.framework
 
-显示为ruby.taboo.org为正确
-*** CURRENT SOURCES ***    
-http://ruby.taobao.org/
-</code></pre><p>4&gt;.安装cocoapods环境</p>
-<pre><code>sudo gem install -n /usr/local/bin cocoapods
-</code></pre><p>5&gt;.设置pod</p>
-<pre><code>pod setup
-</code></pre><p>注意：使用CocoaPods时遇到pod setup失败<br>    关于pod setup的详细解释在这里。对于初次使用CocoaPods的同<br>    学，即使你不使用pod setup命令，在你初次执行pod install命<br>    令时，系统也会自动执行pod setup。而由于长城的原因，不挂VPN<br>    是不可能成功执行pod setup的。或许是我的VPN太垃圾，我挂上<br>    VPN也依然没有执行成功。</p>
-<p><a name="fenced-code-block">解决办法: </a></p>
-<p><a name="fenced-code-block">github上下载到了所需的文件。而只要将文件夹名改为master，将 其拖到/Users/用户名/.cocoapods/repos目录下即可。</a></p>
-<p>注意：现在pod 被墙了<br>pod update ==&gt; pod update –no-repo-update<br>pod install  ==&gt; pod install –no-repo-update</p>
-<p>更新报错：<br><a name="fenced-code-block">1.Unable to find a specification for <code>xxxxx</code></a></p>
-<pre><code>只需要把当前Pod的目录清理一下就行了。在终端执行以下命令：
-1. pod repo remove master  
-2. pod setup  
-setup成功后执行install或update即可。
-</code></pre><p><a name="fenced-code-block">[!] Unable to satisfy the following requirements:</a></p>
-<pre><code>- `Masonry (~&gt; 1.0.0)` required by `Podfile`
-- `Masonry (= 1.0.0)` required by `Podfile.lock`
-</code></pre><p><a name="fenced-code-block">Podfile 里边更新到正确的版本号。</a> </p>
+#import &lt;JavaScriptCore/JavaScriptCore.h&gt; 
+</code></pre><p>js调用iOS分两种情况<br><a id="more"></a></p>
+<p>一，js里面直接调用方法</p>
+<pre><code>-(void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    //网页加载完成调用此方法
+
+    //iOS调用js
+
+    //首先创建JSContext 对象（此处通过当前webView的键获取到jscontext）
+    JSContext *context=[webView valueForKeyPath:@&quot;documentView.webView.mainFrame.javaScriptContext&quot;];
+
+    //js调用iOS
+    //第一种情况
+    //其中test1就是js的方法名称，赋给是一个block 里面是iOS代码
+    //此方法最终将打印出所有接收到的参数，js参数是不固定的 我们测试一下就知道
+    context[@&quot;test1&quot;] = ^() {
+        NSArray *args = [JSContext currentArguments];
+        for (id obj in args) {
+            NSLog(@&quot;%@&quot;,obj);
+        }
+    };
+    //此处我们没有写后台（但是前面我们已经知道iOS是可以调用js的，我们模拟一下）
+    //首先准备一下js代码，来调用js的函数test1 然后执行
+    //一个参数
+    NSString *jsFunctStr=@&quot;test1(&apos;参数1&apos;)&quot;;
+    [context evaluateScript:jsFunctStr];
+
+    //二个参数
+    NSString *jsFunctStr1=@&quot;test1(&apos;参数a&apos;,&apos;参数b&apos;)&quot;;
+    [context evaluateScript:jsFunctStr1];
+
+}
+</code></pre><p>二，js里面通过对象调用方法</p>
+<p>1.首先创建一个类 继承NSObject 并且规定一个协议</p>
+<pre><code>#import &lt;Foundation/Foundation.h&gt;
+#import &lt;JavaScriptCore/JavaScriptCore.h&gt;
+//首先创建一个实现了JSExport协议的协议
+@protocol TestJSObjectProtocol &lt;JSExport&gt;
+//此处我们测试几种参数的情况
+-(void)TestNOParameter;
+-(void)TestOneParameter:(NSString *)message;
+-(void)TestTowParameter:(NSString *)message1 SecondParameter:(NSString *)message2;
+@end
+//让我们创建的类实现上边的协议
+@interface TestJSObject : NSObject&lt;TestJSObjectProtocol&gt;
+@end
+</code></pre><p>2.类的实现</p>
+<pre><code>#import &quot;TestJSObject.h&quot;  
+
+@implementation TestJSObject  
+
+//一下方法都是只是打了个log 等会看log 以及参数能对上就说明js调用了此处的iOS 原生方法  
+-(void)TestNOParameter  
+{  
+    NSLog(@&quot;this is ios TestNOParameter&quot;);  
+}  
+-(void)TestOneParameter:(NSString *)message  
+{  
+    NSLog(@&quot;this is ios TestOneParameter=%@&quot;,message);  
+}  
+-(void)TestTowParameter:(NSString *)message1 SecondParameter:(NSString *)message2  
+{  
+   NSLog(@&quot;this is ios TestTowParameter=%@  Second=%@&quot;,message1,message2);  
+}  
+@end  
+</code></pre><p>3.调用代码如下：</p>
+<pre><code>-(void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    //网页加载完成调用此方法
+
+    //首先创建JSContext 对象（此处通过当前webView的键获取到jscontext）
+    JSContext *context=[webView valueForKeyPath:@&quot;documentView.webView.mainFrame.javaScriptContext&quot;];
+
+    //第二种情况，js是通过对象调用的，我们假设js里面有一个对象 testobject 在调用方法
+    //首先创建我们新建类的对象，将他赋值给js的对象
+
+    TestJSObject *testJO=[TestJSObject new];
+    context[@&quot;testobject&quot;]=testJO;
+
+    //同样我们也用刚才的方式模拟一下js调用方法
+    NSString *jsStr1=@&quot;testobject.TestNOParameter()&quot;;
+    [context evaluateScript:jsStr1];
+    NSString *jsStr2=@&quot;testobject.TestOneParameter(&apos;参数1&apos;)&quot;;
+    [context evaluateScript:jsStr2];
+    NSString *jsStr3=@&quot;testobject.TestTowParameterSecondParameter(&apos;参数A&apos;,&apos;参数B&apos;)&quot;;
+    [context evaluateScript:jsStr3];
+
+}
+</code></pre><p>注意：</p>
+<p>1.如果JS是一个参数</p>
+<p>JS：</p>
+<p><code>testobject.TestOneParameter(&#39;参数1&#39;)</code></p>
+<p>代理方法：</p>
+<p><code>-(void)TestOneParameter:(NSString *)message;</code></p>
+<p>2.如果js是多个参数的话  我们代理方法的所有变量前的名字连起来要和js的方法名字一样</p>
+<p>JS：</p>
+<p><code>testobject.TestTowParameterSecondParameter(&#39;参数A&#39;,&#39;参数B&#39;)</code></p>
+<p>代理方法：</p>
+<p><code>-(void)TestTowParameter:(NSString *)message1 SecondParameter:(NSString *)message2;</code></p>
 
       
     </div>
@@ -270,18 +348,9 @@ setup成功后执行install或update即可。
     
 <nav id="article-nav">
   
-    <a href="/posts/uncategorized/2016-06-06-一个问题.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          一个问题
-        
-      </div>
-    </a>
   
-  
-    <a href="/posts/uncategorized/2016-05-31-iOS面试题汇总.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">iOS面试题汇总</div>
+    <a href="/posts/uncategorized/2016-06-06-一个问题.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">一个问题</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -316,7 +385,7 @@ setup成功后执行install或update即可。
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="CocoaPods" data-title="CocoaPods" data-url="http://imjade.github.io/posts/uncategorized/2016-06-06-CocoaPods.html"></div>
+	<div class="ds-thread" data-thread-key="JS与OC交互" data-title="JS与OC交互" data-url="http://imjade.github.io/posts/uncategorized/2016-06-15-JS与OC交互.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
