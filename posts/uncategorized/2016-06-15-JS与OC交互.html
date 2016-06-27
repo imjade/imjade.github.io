@@ -22,7 +22,7 @@ JavaScriptCore.framework
 
 #import &amp;lt;JavaScriptCore/JavaScriptCore.h&amp;gt; 
 js调用iOS分两种情况">
-<meta property="og:updated_time" content="2016-06-15T06:44:31.000Z">
+<meta property="og:updated_time" content="2016-06-27T01:36:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS与OC交互">
 <meta name="twitter:description" content="参考链接：http://blog.csdn.net/lwjok2007/article/details/47058795 
@@ -339,6 +339,8 @@ JavaScriptCore.framework
 <p><code>testobject.TestTowParameterSecondParameter(&#39;参数A&#39;,&#39;参数B&#39;)</code></p>
 <p>代理方法：</p>
 <p><code>-(void)TestTowParameter:(NSString *)message1 SecondParameter:(NSString *)message2;</code></p>
+<p><a>注意</a></p>
+<p><code>JSContext *context=[webView valueForKeyPath:@&quot;documentView.webView.mainFrame.javaScriptContext&quot;];</code><br>应该放在<br><code>-(void)webViewDidFinishLoad:(UIWebView *)webView</code><br>，因为JSContext只会捕获当前页面JS事件。</p>
 
       
     </div>
