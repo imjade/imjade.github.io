@@ -4,27 +4,36 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>关于block | Jade&#39;s Home</title>
+  <title>IPA Automatic Resign | Jade&#39;s Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="__weak __typeof(self)weakSelf = self;
-self.backgroundTaskIdentifier = [application beginBackgroundTaskWithExpirationHandler:^{
-    __strong __typeof(weakSelf)strongSelf = weakSelf;
-}];">
+  <meta name="description" content="一个自动重签ipa的需求。
+1.https://github.com/maciekish/iReSign 一开始找到了这个自动重签开源工具。可以实现半自动的重签功能。但是并不能满足需求。继续吧
+2.找啊找啊，找。。发现所有的工具的源码都是归到了这几步命令。
+Step1 : 
+unzip YourApp.ipa
+Step2: 
+rm -rf Payload/YourApp.app/_CodeSign">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于block">
-<meta property="og:url" content="http://imjade.github.io/posts/uncategorized/2016-06-18-关于block.html">
+<meta property="og:title" content="IPA Automatic Resign">
+<meta property="og:url" content="http://imjade.github.io/posts/uncategorized/2016-07-14-IPA-Resign.html">
 <meta property="og:site_name" content="Jade's Home">
-<meta property="og:description" content="__weak __typeof(self)weakSelf = self;
-self.backgroundTaskIdentifier = [application beginBackgroundTaskWithExpirationHandler:^{
-    __strong __typeof(weakSelf)strongSelf = weakSelf;
-}];">
-<meta property="og:updated_time" content="2016-06-18T05:22:16.000Z">
+<meta property="og:description" content="一个自动重签ipa的需求。
+1.https://github.com/maciekish/iReSign 一开始找到了这个自动重签开源工具。可以实现半自动的重签功能。但是并不能满足需求。继续吧
+2.找啊找啊，找。。发现所有的工具的源码都是归到了这几步命令。
+Step1 : 
+unzip YourApp.ipa
+Step2: 
+rm -rf Payload/YourApp.app/_CodeSign">
+<meta property="og:updated_time" content="2016-07-14T06:23:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于block">
-<meta name="twitter:description" content="__weak __typeof(self)weakSelf = self;
-self.backgroundTaskIdentifier = [application beginBackgroundTaskWithExpirationHandler:^{
-    __strong __typeof(weakSelf)strongSelf = weakSelf;
-}];">
+<meta name="twitter:title" content="IPA Automatic Resign">
+<meta name="twitter:description" content="一个自动重签ipa的需求。
+1.https://github.com/maciekish/iReSign 一开始找到了这个自动重签开源工具。可以实现半自动的重签功能。但是并不能满足需求。继续吧
+2.找啊找啊，找。。发现所有的工具的源码都是归到了这几步命令。
+Step1 : 
+unzip YourApp.ipa
+Step2: 
+rm -rf Payload/YourApp.app/_CodeSign">
   
     <link rel="alternative" href="/atom.xml" title="Jade&#39;s Home" type="application/atom+xml">
   
@@ -192,11 +201,11 @@ self.backgroundTaskIdentifier = [application beginBackgroundTaskWithExpirationHa
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-关于block" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-IPA-Resign" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/posts/uncategorized/2016-06-18-关于block.html" class="article-date">
-  	<time datetime="2016-06-18T05:16:22.000Z" itemprop="datePublished">2016-06-18</time>
+      <a href="/posts/uncategorized/2016-07-14-IPA-Resign.html" class="article-date">
+  	<time datetime="2016-07-14T06:20:11.000Z" itemprop="datePublished">2016-07-14</time>
 </a>
     </div>
   
@@ -209,7 +218,7 @@ self.backgroundTaskIdentifier = [application beginBackgroundTaskWithExpirationHa
         
   
     <h1 class="article-title" itemprop="name">
-      关于block
+      IPA Automatic Resign
     </h1>
   
 
@@ -229,21 +238,64 @@ self.backgroundTaskIdentifier = [application beginBackgroundTaskWithExpirationHa
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code>__weak __typeof(self)weakSelf = self;
-self.backgroundTaskIdentifier = [application beginBackgroundTaskWithExpirationHandler:^{
-    __strong __typeof(weakSelf)strongSelf = weakSelf;
-}];
-</code></pre><a id="more"></a>
-<p>weakSelf是为了block不持有self，避免循环引用<a name="fenced-code-block">（ block 持有了 self，block 持有了block。block 在self释放时候会释放，如果block持有了self，这时候self就释放不了）</a>，而再声明一个strongSelf是因为一旦进入block执行，就不允许self在这个执行过程中释放。block执行完后这个strongSelf会自动释放，没有循环引用问题。</p>
-<p><a>1.__weak</a></p>
-<pre><code>1&gt;.若附有__weak 修饰符的变量所引用的对象被废弃，则将nil 赋值给该变量。
+        <p><a>一个自动重签ipa的需求。</a></p>
+<p>1.<a href="https://github.com/maciekish/iReSign" target="_blank" rel="external">https://github.com/maciekish/iReSign</a> 一开始找到了这个自动重签开源工具。可以实现半自动的重签功能。但是并不能满足需求。继续吧</p>
+<p>2.找啊找啊，找。。发现所有的工具的源码都是归到了这几步命令。</p>
+<pre><code>Step1 : 
+unzip YourApp.ipa
+Step2: 
+rm -rf Payload/YourApp.app/_CodeSignature
+Step3: 
+cp InHouse.mobileprovision Payload/YourApp.app/embedded.mobileprovision
+Step4: 
+/usr/bin/codesign -f -s &quot;iPhone Distribution: YourCompanyName&quot; --resource-rules Payload/YourApp.app/ResourceRules.plist Payload/YourApp.app
+Step 5: 
+zip -r YourApp_inhouse.ipa Payload
+* InHouse.mobileprovision 是你要用来签名的provision文件
+* iPhone Distribution: YourCompanyName 是指该签名对应的证书的名字。这个可以在keychain中找到
+</code></pre><p>   <a>但是会遇ResourceRules.plist找不到的问题，要设置</a></p>
+<pre><code>Click on your project &gt; Targets &gt; Select your target &gt; Build Settings &gt;
+Code Signing Resource Rules Path
+and add :
+$(SDKROOT)/ResourceRules.plist
+</code></pre><p><a>但是ipa中包含Framework and Plugins 也不能重签成功。</a><br><a id="more"></a><br>3.<a href="https://github.com/ikalnitsky/iresign" target="_blank" rel="external">https://github.com/ikalnitsky/iresign</a> 一个Python 重签脚本 一样的不能重签包含Framework and Plugins 的ipa</p>
+<p>4.就在放弃要打算重新看回iReSign源码做外部调用iReSign程序来坐自动重签时，又Google到一个脚本</p>
+<p><a href="http://www.xgiovio.com/blog-photos-videos-other/blog/resign-your-ios-ipa-frameworks-and-plugins-included/" target="_blank" rel="external">http://www.xgiovio.com/blog-photos-videos-other/blog/resign-your-ios-ipa-frameworks-and-plugins-included/</a></p>
+<p>在signall.sh里边修改</p>
+<pre><code>signscript=&quot;/path/to/sign.sh&quot;                      #signscript脚本路径
 
-2&gt;.使用附有__weak 修饰符的变量，即是使用注册到autoreleasepool 中的对象。
-</code></pre><p><a>2.因为weakSelf 注册到autoreleasepool里边，可能会被释放所以在block里边要用把weakself修饰成强引用strongself来避免释放。</a></p>
-<p><a>3.但是修饰成强引用strongself，会不会和self一样了呢？要是一样的话weakself是不是没有作用了，还是会出现循环引用问题.</a></p>
-<pre><code>1&gt;.答案是不会的。因为：block 只有截获外部变量时，才会引用它。如果是内部新建一个，则没有任何问题。
- 就是说block会引用self这个外部的变量，但是strongSelf这个内部变量是不会引用的。
-</code></pre>
+ipasourcefolder=&quot;path/to/ipas/source/folder&quot;       #ipa文件的路径
+
+ipadestfolder=&quot;/path/to/ipas/destinations/folder/&quot; #生成重签ipa路径
+
+developer1=&quot;iPhone Developer: xxxxx (xxxxx)&quot;       #是指该签名对应的证书的名字。这个可以在keychain中找到
+
+mobileprovision1=&quot;/path/to/mobile/provision&quot;       #要重签的xx.mobileprovision文件路径
+
+cd $ipasourcefolder
+
+find -d . -type f -name &quot;*.ipa&quot;&gt; files.txt
+
+while IFS=&apos;&apos; read -r line || [[ -n &quot;$line&quot; ]]; do
+
+filename=$(basename &quot;$line&quot; .ipa)
+echo &quot;Ipa: $filename&quot;
+#_dev1_______
+output=$ipadestfolder$filename
+output+=&quot;_signed_dev1.ipa&quot;                     #生成重签ipa的后缀名称
+&quot;$signscript&quot; &quot;$line&quot; &quot;$developer1&quot; &quot;$mobileprovision1&quot; &quot;$output&quot;
+
+done &lt; files.txt
+rm files.txt
+</code></pre><p>源码:<a href="https://bitbucket.org/xgiovio/ios-ipa-resign/src" target="_blank" rel="external">https://bitbucket.org/xgiovio/ios-ipa-resign/src</a></p>
+<p>终于是可以了。</p>
+<p>相关链接：</p>
+<p><a href="https://github.com/maciekish/iReSign" target="_blank" rel="external">https://github.com/maciekish/iReSign</a></p>
+<p><a href="http://www.lai18.com/content/755251.html" target="_blank" rel="external">http://www.lai18.com/content/755251.html</a></p>
+<p><a href="http://stackoverflow.com/questions/26497863/xcode-6-1-error-while-building-ipa" target="_blank" rel="external">http://stackoverflow.com/questions/26497863/xcode-6-1-error-while-building-ipa</a></p>
+<p><a href="http://www.xgiovio.com/blog-photos-videos-other/blog/resign-your-ios-ipa-frameworks-and-plugins-included/" target="_blank" rel="external">http://www.xgiovio.com/blog-photos-videos-other/blog/resign-your-ios-ipa-frameworks-and-plugins-included/</a></p>
+<p><a href="https://www.google.com.hk/?gws_rd=ssl" target="_blank" rel="external">https://www.google.com.hk/?gws_rd=ssl</a></p>
+
       
     </div>
     
@@ -252,18 +304,9 @@ self.backgroundTaskIdentifier = [application beginBackgroundTaskWithExpirationHa
     
 <nav id="article-nav">
   
-    <a href="/posts/uncategorized/2016-07-14-IPA-Resign.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          IPA Automatic Resign
-        
-      </div>
-    </a>
   
-  
-    <a href="/posts/uncategorized/2016-06-15-JS与OC交互.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JS与OC交互</div>
+    <a href="/posts/uncategorized/2016-06-18-关于block.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于block</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -298,7 +341,7 @@ self.backgroundTaskIdentifier = [application beginBackgroundTaskWithExpirationHa
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="关于block" data-title="关于block" data-url="http://imjade.github.io/posts/uncategorized/2016-06-18-关于block.html"></div>
+	<div class="ds-thread" data-thread-key="IPA-Resign" data-title="IPA Automatic Resign" data-url="http://imjade.github.io/posts/uncategorized/2016-07-14-IPA-Resign.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

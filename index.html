@@ -184,6 +184,86 @@
 
       <div class="body-wrap">
   
+    <article id="post-IPA-Resign" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/posts/uncategorized/2016-07-14-IPA-Resign.html" class="article-date">
+  	<time datetime="2016-07-14T06:20:11.000Z" itemprop="datePublished">2016-07-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-07-14-IPA-Resign.html">IPA Automatic Resign</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a>一个自动重签ipa的需求。</a></p>
+<p>1.<a href="https://github.com/maciekish/iReSign">https://github.com/maciekish/iReSign</a> 一开始找到了这个自动重签开源工具。可以实现半自动的重签功能。但是并不能满足需求。继续吧</p>
+<p>2.找啊找啊，找。。发现所有的工具的源码都是归到了这几步命令。</p>
+<pre><code>Step1 : 
+unzip YourApp.ipa
+Step2: 
+rm -rf Payload/YourApp.app/_CodeSignature
+Step3: 
+cp InHouse.mobileprovision Payload/YourApp.app/embedded.mobileprovision
+Step4: 
+/usr/bin/codesign -f -s &quot;iPhone Distribution: YourCompanyName&quot; --resource-rules Payload/YourApp.app/ResourceRules.plist Payload/YourApp.app
+Step 5: 
+zip -r YourApp_inhouse.ipa Payload
+* InHouse.mobileprovision 是你要用来签名的provision文件
+* iPhone Distribution: YourCompanyName 是指该签名对应的证书的名字。这个可以在keychain中找到
+</code></pre><p>   <a>但是会遇ResourceRules.plist找不到的问题，要设置</a></p>
+<pre><code>Click on your project &gt; Targets &gt; Select your target &gt; Build Settings &gt;
+Code Signing Resource Rules Path
+and add :
+$(SDKROOT)/ResourceRules.plist
+</code></pre><p><a>但是ipa中包含Framework and Plugins 也不能重签成功。</a><br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/posts/uncategorized/2016-07-14-IPA-Resign.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-关于block" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
