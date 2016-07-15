@@ -4,30 +4,17 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>const static extern | Jade&#39;s Home</title>
+  <title>Jade&#39;s Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="const static extern
-1.const 定义全局常量 和static一样初始化后不能修改，全局范围
-2.static 静态变量 ，.h中定义后，在a.m 中赋值后在b.m 中是没有赋值的 。范围只属于本类
-3.extern 意思就是这个变量已经定义了，用就可以了。
-相关链接:http://blog.csdn.net/xpwang168/article/details/8087143">
-<meta property="og:type" content="article">
-<meta property="og:title" content="const static extern">
-<meta property="og:url" content="http://imjade.github.io/posts/uncategorized/2016-07-14-const-static-extern.html">
+  <meta name="description" content="This is My Home. 写些技术的，聊点家常的。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jade's Home">
+<meta property="og:url" content="http://imjade.github.io/page/2/index.html">
 <meta property="og:site_name" content="Jade's Home">
-<meta property="og:description" content="const static extern
-1.const 定义全局常量 和static一样初始化后不能修改，全局范围
-2.static 静态变量 ，.h中定义后，在a.m 中赋值后在b.m 中是没有赋值的 。范围只属于本类
-3.extern 意思就是这个变量已经定义了，用就可以了。
-相关链接:http://blog.csdn.net/xpwang168/article/details/8087143">
-<meta property="og:updated_time" content="2016-07-14T06:26:39.000Z">
+<meta property="og:description" content="This is My Home. 写些技术的，聊点家常的。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="const static extern">
-<meta name="twitter:description" content="const static extern
-1.const 定义全局常量 和static一样初始化后不能修改，全局范围
-2.static 静态变量 ，.h中定义后，在a.m 中赋值后在b.m 中是没有赋值的 。范围只属于本类
-3.extern 意思就是这个变量已经定义了，用就可以了。
-相关链接:http://blog.csdn.net/xpwang168/article/details/8087143">
+<meta name="twitter:title" content="Jade's Home">
+<meta name="twitter:description" content="This is My Home. 写些技术的，聊点家常的。">
   
     <link rel="alternative" href="/atom.xml" title="Jade&#39;s Home" type="application/atom+xml">
   
@@ -195,11 +182,13 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-const-static-extern" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
+  
+    <article id="post-hello" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/posts/uncategorized/2016-07-14-const-static-extern.html" class="article-date">
-  	<time datetime="2016-07-14T06:25:04.000Z" itemprop="datePublished">2016-07-14</time>
+      <a href="/posts/uncategorized/2016-05-16-hello.html" class="article-date">
+  	<time datetime="2016-05-16T10:08:01.000Z" itemprop="datePublished">2016-05-16</time>
 </a>
     </div>
   
@@ -211,107 +200,62 @@
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      const static extern
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-05-16-hello.html">ios Framework 合并</a>
     </h1>
   
 
       </header>
       
-      <div class="article-info article-info-post">
-        
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>1. 查看ios Framework 支持的Cpu 框架 xxx/.xxx.framework (xxx路径下)
+
+     cd xxx/.xxx.framework
+
+     lipo -info xxx
+
+2. 合并framework a:xxx/abc.framwork b:sss/abc.framework
+
+    lipo -create xxx/a.framwork/abc sss/abc.framework -output newabc 
+
+    生成framework二进制文件在sss/abc.framework下
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
 	</div>
 
-        
-
-        <div class="clearfix"></div>
-      </div>
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a>const static extern</a></p>
-<pre><code>1.const 定义全局常量 和static一样初始化后不能修改，全局范围
-2.static 静态变量 ，.h中定义后，在a.m 中赋值后在b.m 中是没有赋值的 。范围只属于本类
-3.extern 意思就是这个变量已经定义了，用就可以了。
-</code></pre><p>相关链接:<br><a href="http://blog.csdn.net/xpwang168/article/details/8087143" target="_blank" rel="external">http://blog.csdn.net/xpwang168/article/details/8087143</a></p>
 
       
+      <div class="clearfix"></div>
     </div>
     
   </div>
   
-    
-<nav id="article-nav">
-  
-    <a href="/posts/uncategorized/2016-07-15-NSTimer、CADisplayLink、GCD-三种定时器的用法.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          NSTimer、CADisplayLink、GCD 三种定时器的用法
-        
-      </div>
-    </a>
-  
-  
-    <a href="/posts/uncategorized/2016-07-14-IPA-Resign.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">IPA Automatic Resign</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
-
-  
 </article>
 
 
-<div class="share_jia">
-	<!-- JiaThis Button BEGIN -->
-	<div class="jiathis_style">
-		<span class="jiathis_txt">Share to: &nbsp; </span>
-		<a class="jiathis_button_facebook"></a> 
-    <a class="jiathis_button_twitter"></a>
-    <a class="jiathis_button_plus"></a> 
-    <a class="jiathis_button_tsina"></a>
-		<a class="jiathis_button_cqq"></a>
-		<a class="jiathis_button_douban"></a>
-		<a class="jiathis_button_weixin"></a>
-		<a class="jiathis_button_tumblr"></a>
-    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-	</div>
-	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
-	<!-- JiaThis Button END -->
-</div>
 
 
 
 
 
 
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="const-static-extern" data-title="const static extern" data-url="http://imjade.github.io/posts/uncategorized/2016-07-14-const-static-extern.html"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"imjade"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
 
-
-
-
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -335,8 +279,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: false,
-		isPost: true,
+		isHome: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
