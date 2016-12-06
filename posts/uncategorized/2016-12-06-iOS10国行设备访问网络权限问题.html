@@ -4,31 +4,26 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Framework 开发的那些事 | Jade&#39;s Home</title>
+  <title>iOS10 国行设备访问网络权限问题 | Jade&#39;s Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.static A 嵌套了static B1&amp;gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
-报错：
-error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
-file: /Applica">
+  <meta name="description" content="在 iOS 10 中苹果专为国行 iPhone 制定了一个「联网权限」功能
+
+检测网络变化，点击允许之前是没有网络，点击允许后会有网络变化，所以判断不是无网络和不是第一次请求。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Framework 开发的那些事">
-<meta property="og:url" content="http://imjade.github.io/posts/uncategorized/2016-05-26-Framework-开发的那些事.html">
+<meta property="og:title" content="iOS10 国行设备访问网络权限问题">
+<meta property="og:url" content="http://imjade.github.io/posts/uncategorized/2016-12-06-iOS10国行设备访问网络权限问题.html">
 <meta property="og:site_name" content="Jade's Home">
-<meta property="og:description" content="1.static A 嵌套了static B1&amp;gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
-报错：
-error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
-file: /Applica">
-<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/image17CE12794-3913-4CE4-86E3-B6B5470A4F36.png">
-<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/7552CFF2-3577-4874-B18A-F9E1ECE57691.png">
-<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/95441BC2-0D41-4552-8FA9-F0DB4447BB84.png">
-<meta property="og:updated_time" content="2016-12-06T09:20:40.000Z">
+<meta property="og:description" content="在 iOS 10 中苹果专为国行 iPhone 制定了一个「联网权限」功能
+
+检测网络变化，点击允许之前是没有网络，点击允许后会有网络变化，所以判断不是无网络和不是第一次请求。">
+<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/image2.jpg">
+<meta property="og:updated_time" content="2016-12-06T09:38:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Framework 开发的那些事">
-<meta name="twitter:description" content="1.static A 嵌套了static B1&amp;gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
-报错：
-error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
-file: /Applica">
-<meta name="twitter:image" content="http://o7rvtx931.bkt.clouddn.com/image17CE12794-3913-4CE4-86E3-B6B5470A4F36.png">
+<meta name="twitter:title" content="iOS10 国行设备访问网络权限问题">
+<meta name="twitter:description" content="在 iOS 10 中苹果专为国行 iPhone 制定了一个「联网权限」功能
+
+检测网络变化，点击允许之前是没有网络，点击允许后会有网络变化，所以判断不是无网络和不是第一次请求。">
+<meta name="twitter:image" content="http://o7rvtx931.bkt.clouddn.com/image2.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Jade&#39;s Home" type="application/atom+xml">
   
@@ -196,11 +191,11 @@ file: /Applica">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-Framework-开发的那些事" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-iOS10国行设备访问网络权限问题" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/posts/uncategorized/2016-05-26-Framework-开发的那些事.html" class="article-date">
-  	<time datetime="2016-05-26T08:27:43.000Z" itemprop="datePublished">2016-05-26</time>
+      <a href="/posts/uncategorized/2016-12-06-iOS10国行设备访问网络权限问题.html" class="article-date">
+  	<time datetime="2016-12-06T08:36:14.000Z" itemprop="datePublished">2016-12-06</time>
 </a>
     </div>
   
@@ -213,7 +208,7 @@ file: /Applica">
         
   
     <h1 class="article-title" itemprop="name">
-      Framework 开发的那些事
+      iOS10 国行设备访问网络权限问题
     </h1>
   
 
@@ -233,15 +228,16 @@ file: /Applica">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-static-A-嵌套了static-B"><a href="#1-static-A-嵌套了static-B" class="headerlink" title="1.static A 嵌套了static B"></a>1.static A 嵌套了static B</h3><pre><code>1&gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
-报错：
-error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
-file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/usr/lib/libz.tbd is not an object file (not allowed in a library)
-</code></pre><p><img src="http://o7rvtx931.bkt.clouddn.com/image17CE12794-3913-4CE4-86E3-B6B5470A4F36.png" alt="报错信息"><br>    <a id="more"></a><br>    2&gt;.如果不添加dylib就会<br>    报错：<br>    ld: framework not found PywSdk for architecture x86_64<br>    clang: error: linker command failed with exit code 1 (use -v to see invocation)<br><img src="http://o7rvtx931.bkt.clouddn.com/7552CFF2-3577-4874-B18A-F9E1ECE57691.png" alt="报错信息"><br>    但是staticB中用到了 <a name="fenced-code-block">系统.Framework</a> 可以添加到staticA中<br>    设想：如果staticB中没有用到dylib库应该是可以static嵌套static吧</p>
-<h3 id="2-dynamic-A-嵌套-dynamic-B-static-B"><a href="#2-dynamic-A-嵌套-dynamic-B-static-B" class="headerlink" title="2.dynamic A 嵌套 dynamic B/static B"></a>2.dynamic A 嵌套 dynamic B/static B</h3><pre><code>1&gt;.因为dynamic是系统保存一份的。所以dynamic A中不能使用和一样的文件和全局文件。报文件重复错误，所以dynamicA中文件和全局变量要避免和dynamic B/static B中得一样。要是一定要用一样的文件要修改文件加个前缀。
-报错：
-</code></pre><p><img src="http://o7rvtx931.bkt.clouddn.com/95441BC2-0D41-4552-8FA9-F0DB4447BB84.png" alt="报错信息"></p>
-
+        <p><a href="http://sspai.com/35720" target="_blank" rel="external">在 iOS 10 中苹果专为国行 iPhone 制定了一个「联网权限」功能</a></p>
+<p><img src="http://o7rvtx931.bkt.clouddn.com/image2.jpg" alt="image"></p>
+<p>检测网络变化，点击允许之前是没有网络，点击允许后会有网络变化，所以判断不是无网络和不是第一次请求。</p>
+<a id="more"></a>
+<pre><code>[[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        if (status != AFNetworkReachabilityStatusNotReachable &amp;&amp; !inited) {
+            [self initRequest];
+        }
+    }];
+</code></pre>
       
     </div>
     
@@ -250,18 +246,18 @@ file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Dev
     
 <nav id="article-nav">
   
-    <a href="/posts/uncategorized/2016-05-31-iOS面试题汇总.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/posts/uncategorized/2016-12-06-NSDataDetector.html" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          iOS面试题汇总
+          NSDataDetector
         
       </div>
     </a>
   
   
-    <a href="/posts/uncategorized/2016-05-26-磕磕碰碰2-1.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">磕磕碰碰2.1</div>
+    <a href="/posts/uncategorized/2016-07-15-NSTimer、CADisplayLink、GCD-三种定时器的用法.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">NSTimer、CADisplayLink、GCD 三种定时器的用法</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -296,7 +292,7 @@ file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Dev
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Framework-开发的那些事" data-title="Framework 开发的那些事" data-url="http://imjade.github.io/posts/uncategorized/2016-05-26-Framework-开发的那些事.html"></div>
+	<div class="ds-thread" data-thread-key="iOS10国行设备访问网络权限问题" data-title="iOS10 国行设备访问网络权限问题" data-url="http://imjade.github.io/posts/uncategorized/2016-12-06-iOS10国行设备访问网络权限问题.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

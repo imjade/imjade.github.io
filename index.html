@@ -112,7 +112,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/iOS-记录/" style="font-size: 20px;">iOS 记录</a> <a href="/tags/iOS面试题/" style="font-size: 10px;">iOS面试题</a>
+						<a href="/tags/Jenkins/" style="font-size: 10px;">Jenkins</a> <a href="/tags/iOS-记录/" style="font-size: 20px;">iOS 记录</a> <a href="/tags/iOS面试题/" style="font-size: 10px;">iOS面试题</a>
 					</div>
 				</section>
 				
@@ -183,6 +183,455 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-Jenkins-搭建（Mac-环境）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/posts/uncategorized/2016-12-06-Jenkins-搭建（Mac-环境）.html" class="article-date">
+  	<time datetime="2016-12-06T11:38:34.000Z" itemprop="datePublished">2016-12-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-12-06-Jenkins-搭建（Mac-环境）.html">Jenkins 搭建（Mac 环境）</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>1.安装Jenkins 两种方式</strong></p>
+<ul>
+<li><a href="http://jenkins-ci.org/">http://jenkins-ci.org/</a>  下载pgk文件直接点击安装(不推荐)。（安装目录：/Users/Shared/Jenkins/下，因为Xcode默认安装在/Users/登录用户/，会有很多操作权限的问题）</li>
+<li>用Homebrew安装 （推荐）。首先要安装Homebrew（<a href="http://brew.sh/）">http://brew.sh/）</a><br>==修默认安装到/Users/登录用户/ 所以要修改默认安装路径如：/Users/登录用户/jenkins/==</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/profile</span><br><span class="line">sudo chmod 775 /etc/profile  //修改其文件权限</span><br><span class="line">export JENKINS_HOME=(要修改的路径信息)</span><br><span class="line">source /etc/profile</span><br><span class="line">执行完成重启系统，再打开jenkins就能看到其主目录已修改成功</span><br></pre></td></tr></table></figure>
+<p><em>1.安装Jenkins</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install jenkins</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Jenkins/">Jenkins</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/posts/uncategorized/2016-12-06-Jenkins-搭建（Mac-环境）.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Apple-Pay的开发设置" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/posts/uncategorized/2016-12-06-Apple-Pay的开发设置.html" class="article-date">
+  	<time datetime="2016-12-06T10:14:47.000Z" itemprop="datePublished">2016-12-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-12-06-Apple-Pay的开发设置.html">Apple Pay的开发设置</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>1.Identifiers-&gt;Merchant ID 新建Merchant ID</strong><br><img src="http://o7rvtx931.bkt.clouddn.com/30428d0a-bca0-4f90-9b2e-d1475a461a7a.png" alt="图1"><br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/posts/uncategorized/2016-12-06-Apple-Pay的开发设置.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-根据内存地址定位错误" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/posts/uncategorized/2016-12-06-根据内存地址定位错误.html" class="article-date">
+  	<time datetime="2016-12-06T10:03:05.000Z" itemprop="datePublished">2016-12-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-12-06-根据内存地址定位错误.html">根据内存地址定位错误</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>1.设置开启memory history：</strong></p>
+<p><img src="http://o7rvtx931.bkt.clouddn.com/14806967.png" alt="开启设置"><br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/posts/uncategorized/2016-12-06-根据内存地址定位错误.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-view切圆角" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/posts/uncategorized/2016-12-06-view切圆角.html" class="article-date">
+  	<time datetime="2016-12-06T09:58:31.000Z" itemprop="datePublished">2016-12-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-12-06-view切圆角.html">view切圆角</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">view.layer.cornerRadius = 5;//对view切圆角的角度</span><br><span class="line">view.layer.masksToBounds = YES;//这个等于YES。view里边的子view也会切相当于clipsToBouns = YES。</span><br><span class="line">//view.layer.masksToBounds = NO;//只切view的圆角不会切view里边view圆角</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-时间戳（毫秒）转date" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/posts/uncategorized/2016-12-06-时间戳（毫秒）转date.html" class="article-date">
+  	<time datetime="2016-12-06T09:51:05.000Z" itemprop="datePublished">2016-12-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-12-06-时间戳（毫秒）转date.html">时间戳（毫秒）转date</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>1.获取毫秒时间戳</strong></p>
+<pre><code>UInt64 recordTime = [[NSDate date] timeIntervalSince1970]*1000;
+</code></pre><p><code>[[NSDate date] timeIntervalSince1970] 是可以获取到后面的毫秒 微秒的 ，只是在保存的时候省略掉了， 如一个时间戳不省略的情况下为 1395399556.862046 ，省略掉后为一般所见 1395399556 。所以想取得毫秒时用获取到的时间戳 *1000 ，想取得微秒时 用取到的时间戳 * 1000 * 1000</code></p>
+<p><strong>2.毫秒时间戳转NSDate</strong></p>
+<pre><code>NSString * timeStampString = @&quot;1423189125873&quot;;
+NSTimeInterval _interval=[timeStampString doubleValue] / 1000.0;
+NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
+NSDateFormatter *objDateformat = [[NSDateFormatter alloc] init];
+[objDateformat setDateFormat:@&quot;yyyy-MM-dd HH:mm:ss.SSS&quot;];
+NSLog(@&quot;%@&quot;, [objDateformat stringFromDate: date]);
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-NSDataDetector" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/posts/uncategorized/2016-12-06-NSDataDetector.html" class="article-date">
+  	<time datetime="2016-12-06T09:36:51.000Z" itemprop="datePublished">2016-12-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-12-06-NSDataDetector.html">NSDataDetector</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.NSDataDetector是继承于NSRegularExpression（Cocoa中的正则表达式）的一个子类。系统帮做好的一些正则匹配。</p>
+<pre><code>public static var orthography: NSTextCheckingResult.CheckingType { get } // language identification
+public static var spelling: NSTextCheckingResult.CheckingType { get } // spell checking
+public static var grammar: NSTextCheckingResult.CheckingType { get } // grammar checking
+public static var date: NSTextCheckingResult.CheckingType { get } // date/time detection
+public static var address: NSTextCheckingResult.CheckingType { get } // address detection
+public static var link: NSTextCheckingResult.CheckingType { get } // link detection
+public static var quote: NSTextCheckingResult.CheckingType { get } // smart quotes
+public static var dash: NSTextCheckingResult.CheckingType { get } // smart dashes
+public static var replacement: NSTextCheckingResult.CheckingType { get } // fixed replacements, such as copyright symbol for (c)
+public static var correction: NSTextCheckingResult.CheckingType { get } // autocorrection
+@available(iOS 4.0, *)
+public static var regularExpression: NSTextCheckingResult.CheckingType { get } // regular expression matches
+@available(iOS 4.0, *)
+public static var phoneNumber: NSTextCheckingResult.CheckingType { get } // phone number detection
+@available(iOS 4.0, *)
+public static var transitInformation: NSTextCheckingResult.CheckingType { get } // transit (e.g. flight) info detection
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/posts/uncategorized/2016-12-06-NSDataDetector.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-iOS10国行设备访问网络权限问题" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/posts/uncategorized/2016-12-06-iOS10国行设备访问网络权限问题.html" class="article-date">
+  	<time datetime="2016-12-06T08:36:14.000Z" itemprop="datePublished">2016-12-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-12-06-iOS10国行设备访问网络权限问题.html">iOS10 国行设备访问网络权限问题</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://sspai.com/35720">在 iOS 10 中苹果专为国行 iPhone 制定了一个「联网权限」功能</a></p>
+<p><img src="http://o7rvtx931.bkt.clouddn.com/image2.jpg" alt="image"></p>
+<p>检测网络变化，点击允许之前是没有网络，点击允许后会有网络变化，所以判断不是无网络和不是第一次请求。</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/posts/uncategorized/2016-12-06-iOS10国行设备访问网络权限问题.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-NSTimer、CADisplayLink、GCD-三种定时器的用法" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -368,459 +817,6 @@ $(SDKROOT)/ResourceRules.plist
       
         <p class="article-more-link">
           <a  href="/posts/uncategorized/2016-07-14-IPA-Resign.html#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-关于block" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/uncategorized/2016-06-18-关于block.html" class="article-date">
-  	<time datetime="2016-06-18T05:16:22.000Z" itemprop="datePublished">2016-06-18</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/uncategorized/2016-06-18-关于block.html">关于block</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <pre><code>__weak __typeof(self)weakSelf = self;
-self.backgroundTaskIdentifier = [application beginBackgroundTaskWithExpirationHandler:^{
-    __strong __typeof(weakSelf)strongSelf = weakSelf;
-}];
-</code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/posts/uncategorized/2016-06-18-关于block.html#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-JS与OC交互" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/uncategorized/2016-06-15-JS与OC交互.html" class="article-date">
-  	<time datetime="2016-06-15T06:34:01.000Z" itemprop="datePublished">2016-06-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/uncategorized/2016-06-15-JS与OC交互.html">JS与OC交互</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>参考链接：<a href="http://blog.csdn.net/lwjok2007/article/details/47058795">http://blog.csdn.net/lwjok2007/article/details/47058795 </a></p>
-<pre><code>添加
-JavaScriptCore.framework
-
-#import &lt;JavaScriptCore/JavaScriptCore.h&gt; 
-</code></pre><p>js调用iOS分两种情况<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/posts/uncategorized/2016-06-15-JS与OC交互.html#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-一个问题" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/uncategorized/2016-06-06-一个问题.html" class="article-date">
-  	<time datetime="2016-06-06T02:39:13.000Z" itemprop="datePublished">2016-06-06</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/uncategorized/2016-06-06-一个问题.html">一个问题</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a name="fenced-code-block">今天帮别人看了一个问题。</a></p>
-<pre><code>具体情况是：初始化两个数组添加了同一组数据（Model），然后数组A传
-递到一个viewA里边，数组B传递到一个viewB里边。这时候ViewA中数组A
-里边的model更新了值。发现ViewB中得数组B中得model也更新了。
-
-指针问题。。
-开始以为是数组指针问题，后来对数组处理也不行。才发现两个数组里边的
-model 内存地址是一样的。。 
-自己的问题，记一下。
-</code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-CocoaPods" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/uncategorized/2016-06-06-CocoaPods.html" class="article-date">
-  	<time datetime="2016-06-06T02:17:57.000Z" itemprop="datePublished">2016-06-06</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/uncategorized/2016-06-06-CocoaPods.html">CocoaPods</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a name="fenced-code-block">cocoapods 安装</a></p>
-<p>1&gt;.删除官方的ruby环境</p>
-<pre><code>gem sources --remove https://rubygems.org/
-</code></pre><p>2&gt;.等有反应之后再敲入以下命令</p>
-<pre><code>gem sources -a http://ruby.taobao.org/
-</code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/posts/uncategorized/2016-06-06-CocoaPods.html#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-iOS面试题汇总" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/uncategorized/2016-05-31-iOS面试题汇总.html" class="article-date">
-  	<time datetime="2016-05-31T09:58:22.000Z" itemprop="datePublished">2016-05-31</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/uncategorized/2016-05-31-iOS面试题汇总.html">iOS面试题汇总</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <pre><code>群里边看到了有人分享了这篇面试题，拿来主义。。。
-</code></pre><p>#阿里一面</p>
-<p>1.Android的activity</p>
-<p>2.Category支持添加属性与成员变量吗</p>
-<p>3.是否了解设计模式, 用过哪些</p>
-<p>4.iOS7之后, 蓝牙的围栏功能</p>
-<p>5.MVC是否了解?介绍下使用情况。</p>
-<p>6.MVC里面, View怎么通知到Model</p>
-<p>7.了解delegate吗?并介绍<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS面试题/">iOS面试题</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/posts/uncategorized/2016-05-31-iOS面试题汇总.html#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Framework-开发的那些事" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/uncategorized/2016-05-26-Framework-开发的那些事.html" class="article-date">
-  	<time datetime="2016-05-26T08:27:43.000Z" itemprop="datePublished">2016-05-26</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/uncategorized/2016-05-26-Framework-开发的那些事.html">Framework 开发的那些事</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-static-A-嵌套了static-B"><a href="#1-static-A-嵌套了static-B" class="headerlink" title="1.static A 嵌套了static B"></a>1.static A 嵌套了static B</h3><pre><code>1&gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
-报错：
-error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
-file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/usr/lib/libz.tbd is not an object file (not allowed in a library)
-</code></pre><p><img src="http://o7rvtx931.bkt.clouddn.com/image17CE12794-3913-4CE4-86E3-B6B5470A4F36.png" alt="报错信息"><br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/posts/uncategorized/2016-05-26-Framework-开发的那些事.html#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-磕磕碰碰2-1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/uncategorized/2016-05-26-磕磕碰碰2-1.html" class="article-date">
-  	<time datetime="2016-05-26T05:46:56.000Z" itemprop="datePublished">2016-05-26</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/uncategorized/2016-05-26-磕磕碰碰2-1.html">磕磕碰碰2.1</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <pre><code>前提：正在做SDK（Framework）给客户集成
-就在前几天领导说要开发一个新版本，要实现一个功能：“给集成Framework_a的ipa文件替换成Framework_b，不需要重新打包ipa文件”。
-</code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/posts/uncategorized/2016-05-26-磕磕碰碰2-1.html#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

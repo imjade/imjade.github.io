@@ -4,31 +4,26 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Framework 开发的那些事 | Jade&#39;s Home</title>
+  <title>NSDataDetector | Jade&#39;s Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.static A 嵌套了static B1&amp;gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
-报错：
-error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
-file: /Applica">
+  <meta name="description" content="1.NSDataDetector是继承于NSRegularExpression（Cocoa中的正则表达式）的一个子类。系统帮做好的一些正则匹配。
+public static var orthography: NSTextCheckingResult.CheckingType { get } // language identification
+public static var spelling:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Framework 开发的那些事">
-<meta property="og:url" content="http://imjade.github.io/posts/uncategorized/2016-05-26-Framework-开发的那些事.html">
+<meta property="og:title" content="NSDataDetector">
+<meta property="og:url" content="http://imjade.github.io/posts/uncategorized/2016-12-06-NSDataDetector.html">
 <meta property="og:site_name" content="Jade's Home">
-<meta property="og:description" content="1.static A 嵌套了static B1&amp;gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
-报错：
-error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
-file: /Applica">
-<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/image17CE12794-3913-4CE4-86E3-B6B5470A4F36.png">
-<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/7552CFF2-3577-4874-B18A-F9E1ECE57691.png">
-<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/95441BC2-0D41-4552-8FA9-F0DB4447BB84.png">
-<meta property="og:updated_time" content="2016-12-06T09:20:40.000Z">
+<meta property="og:description" content="1.NSDataDetector是继承于NSRegularExpression（Cocoa中的正则表达式）的一个子类。系统帮做好的一些正则匹配。
+public static var orthography: NSTextCheckingResult.CheckingType { get } // language identification
+public static var spelling:">
+<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/13748126.png">
+<meta property="og:updated_time" content="2016-12-06T09:48:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Framework 开发的那些事">
-<meta name="twitter:description" content="1.static A 嵌套了static B1&amp;gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
-报错：
-error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
-file: /Applica">
-<meta name="twitter:image" content="http://o7rvtx931.bkt.clouddn.com/image17CE12794-3913-4CE4-86E3-B6B5470A4F36.png">
+<meta name="twitter:title" content="NSDataDetector">
+<meta name="twitter:description" content="1.NSDataDetector是继承于NSRegularExpression（Cocoa中的正则表达式）的一个子类。系统帮做好的一些正则匹配。
+public static var orthography: NSTextCheckingResult.CheckingType { get } // language identification
+public static var spelling:">
+<meta name="twitter:image" content="http://o7rvtx931.bkt.clouddn.com/13748126.png">
   
     <link rel="alternative" href="/atom.xml" title="Jade&#39;s Home" type="application/atom+xml">
   
@@ -196,11 +191,11 @@ file: /Applica">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-Framework-开发的那些事" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-NSDataDetector" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/posts/uncategorized/2016-05-26-Framework-开发的那些事.html" class="article-date">
-  	<time datetime="2016-05-26T08:27:43.000Z" itemprop="datePublished">2016-05-26</time>
+      <a href="/posts/uncategorized/2016-12-06-NSDataDetector.html" class="article-date">
+  	<time datetime="2016-12-06T09:36:51.000Z" itemprop="datePublished">2016-12-06</time>
 </a>
     </div>
   
@@ -213,7 +208,7 @@ file: /Applica">
         
   
     <h1 class="article-title" itemprop="name">
-      Framework 开发的那些事
+      NSDataDetector
     </h1>
   
 
@@ -233,14 +228,86 @@ file: /Applica">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-static-A-嵌套了static-B"><a href="#1-static-A-嵌套了static-B" class="headerlink" title="1.static A 嵌套了static B"></a>1.static A 嵌套了static B</h3><pre><code>1&gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
-报错：
-error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
-file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/usr/lib/libz.tbd is not an object file (not allowed in a library)
-</code></pre><p><img src="http://o7rvtx931.bkt.clouddn.com/image17CE12794-3913-4CE4-86E3-B6B5470A4F36.png" alt="报错信息"><br>    <a id="more"></a><br>    2&gt;.如果不添加dylib就会<br>    报错：<br>    ld: framework not found PywSdk for architecture x86_64<br>    clang: error: linker command failed with exit code 1 (use -v to see invocation)<br><img src="http://o7rvtx931.bkt.clouddn.com/7552CFF2-3577-4874-B18A-F9E1ECE57691.png" alt="报错信息"><br>    但是staticB中用到了 <a name="fenced-code-block">系统.Framework</a> 可以添加到staticA中<br>    设想：如果staticB中没有用到dylib库应该是可以static嵌套static吧</p>
-<h3 id="2-dynamic-A-嵌套-dynamic-B-static-B"><a href="#2-dynamic-A-嵌套-dynamic-B-static-B" class="headerlink" title="2.dynamic A 嵌套 dynamic B/static B"></a>2.dynamic A 嵌套 dynamic B/static B</h3><pre><code>1&gt;.因为dynamic是系统保存一份的。所以dynamic A中不能使用和一样的文件和全局文件。报文件重复错误，所以dynamicA中文件和全局变量要避免和dynamic B/static B中得一样。要是一定要用一样的文件要修改文件加个前缀。
-报错：
-</code></pre><p><img src="http://o7rvtx931.bkt.clouddn.com/95441BC2-0D41-4552-8FA9-F0DB4447BB84.png" alt="报错信息"></p>
+        <p>1.NSDataDetector是继承于NSRegularExpression（Cocoa中的正则表达式）的一个子类。系统帮做好的一些正则匹配。</p>
+<pre><code>public static var orthography: NSTextCheckingResult.CheckingType { get } // language identification
+public static var spelling: NSTextCheckingResult.CheckingType { get } // spell checking
+public static var grammar: NSTextCheckingResult.CheckingType { get } // grammar checking
+public static var date: NSTextCheckingResult.CheckingType { get } // date/time detection
+public static var address: NSTextCheckingResult.CheckingType { get } // address detection
+public static var link: NSTextCheckingResult.CheckingType { get } // link detection
+public static var quote: NSTextCheckingResult.CheckingType { get } // smart quotes
+public static var dash: NSTextCheckingResult.CheckingType { get } // smart dashes
+public static var replacement: NSTextCheckingResult.CheckingType { get } // fixed replacements, such as copyright symbol for (c)
+public static var correction: NSTextCheckingResult.CheckingType { get } // autocorrection
+@available(iOS 4.0, *)
+public static var regularExpression: NSTextCheckingResult.CheckingType { get } // regular expression matches
+@available(iOS 4.0, *)
+public static var phoneNumber: NSTextCheckingResult.CheckingType { get } // phone number detection
+@available(iOS 4.0, *)
+public static var transitInformation: NSTextCheckingResult.CheckingType { get } // transit (e.g. flight) info detection
+</code></pre><a id="more"></a>
+<p>2.初始化方法：</p>
+<pre><code>public init(types checkingTypes: NSTextCheckingTypes) throws
+</code></pre><p>3.几个调用的方法：</p>
+<pre><code>open func matches(in string: String, options: NSRegularExpression.MatchingOptions = [], range: NSRange) -&gt; [NSTextCheckingResult] //返回匹配到的数组
+    open func numberOfMatches(in string: String, options: NSRegularExpression.MatchingOptions = [], range: NSRange) -&gt; Int   //返回匹配到的个数
+    open func firstMatch(in string: String, options: NSRegularExpression.MatchingOptions = [], range: NSRange) -&gt; NSTextCheckingResult? //返回第一个匹配到的结果
+    open func rangeOfFirstMatch(in string: String, options: NSRegularExpression.MatchingOptions = [], range: NSRange) -&gt; NSRange //返回第一个匹配到结果的范围
+</code></pre><p>4.使用：</p>
+<pre><code>lazy var showlabel:UILabel = {
+        let string = &quot;电话号码是15812345678还是15012345678\n网址是www.baidu.com&quot;
+        let showLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 100))
+        showLabel.center = self.view.center
+        showLabel.font = UIFont.systemFont(ofSize: 14)
+        showLabel.text = string;
+        showLabel.numberOfLines = 0
+        return showLabel
+    }()
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        setUp()
+    }
+
+    func setUp() {
+        self.view.addSubview(self.showlabel)
+        let string = self.showlabel.text! as String
+
+        let types: NSTextCheckingResult.CheckingType = [.phoneNumber,.link]
+        let detector:NSDataDetector = try!NSDataDetector(types: types.rawValue)
+        let attributeText = NSMutableAttributedString(string: string);
+
+        detector.enumerateMatches(in: string, options: NSRegularExpression.MatchingOptions(rawValue:0), range: NSMakeRange(0, (string as NSString).length), using: {
+            (_result:NSTextCheckingResult?, _flags:NSRegularExpression.MatchingFlags, _:UnsafeMutablePointer&lt;ObjCBool&gt;) -&gt; Void in
+            let range:NSRange = (_result?.range)!
+            print(_result ?? &quot;&quot;);
+
+            if _result?.resultType == .link {
+                attributeText.addAttribute(NSForegroundColorAttributeName, value: UIColor.red, range: range)
+                attributeText.addAttribute(NSUnderlineStyleAttributeName, value: NSNumber(value: 1), range: range)
+            }else if _result?.resultType == .phoneNumber {
+                attributeText.addAttribute(NSForegroundColorAttributeName, value: UIColor.orange, range: range)
+            }
+            self.showlabel.attributedText = attributeText
+            }
+        )
+        /*
+         * 返回数组匹配到的数组
+         */
+        let matches = detector.matches(in: string, options: NSRegularExpression.MatchingOptions(rawValue:0), range: NSMakeRange(0, (string as NSString).length));
+        for result:NSTextCheckingResult in matches {
+            let range:NSRange = result.range
+            if result.resultType == .link {
+                attributeText.addAttribute(NSForegroundColorAttributeName, value: UIColor.red, range: range)
+                attributeText.addAttribute(NSUnderlineStyleAttributeName, value: NSNumber(value: 1), range: range)
+            }else if result.resultType == .phoneNumber {
+                attributeText.addAttribute(NSForegroundColorAttributeName, value: UIColor.orange, range: range)
+            }
+            self.showlabel.attributedText = attributeText
+        }
+</code></pre><p>5.实现效果：<br><img src="http://o7rvtx931.bkt.clouddn.com/13748126.png" alt="效果"></p>
 
       
     </div>
@@ -250,18 +317,18 @@ file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Dev
     
 <nav id="article-nav">
   
-    <a href="/posts/uncategorized/2016-05-31-iOS面试题汇总.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/posts/uncategorized/2016-12-06-时间戳（毫秒）转date.html" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          iOS面试题汇总
+          时间戳（毫秒）转date
         
       </div>
     </a>
   
   
-    <a href="/posts/uncategorized/2016-05-26-磕磕碰碰2-1.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">磕磕碰碰2.1</div>
+    <a href="/posts/uncategorized/2016-12-06-iOS10国行设备访问网络权限问题.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">iOS10 国行设备访问网络权限问题</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -296,7 +363,7 @@ file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Dev
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Framework-开发的那些事" data-title="Framework 开发的那些事" data-url="http://imjade.github.io/posts/uncategorized/2016-05-26-Framework-开发的那些事.html"></div>
+	<div class="ds-thread" data-thread-key="NSDataDetector" data-title="NSDataDetector" data-url="http://imjade.github.io/posts/uncategorized/2016-12-06-NSDataDetector.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

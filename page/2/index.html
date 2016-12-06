@@ -112,7 +112,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/iOS-记录/" style="font-size: 20px;">iOS 记录</a> <a href="/tags/iOS面试题/" style="font-size: 10px;">iOS面试题</a>
+						<a href="/tags/Jenkins/" style="font-size: 10px;">Jenkins</a> <a href="/tags/iOS-记录/" style="font-size: 20px;">iOS 记录</a> <a href="/tags/iOS面试题/" style="font-size: 10px;">iOS面试题</a>
 					</div>
 				</section>
 				
@@ -183,6 +183,459 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-关于block" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/posts/uncategorized/2016-06-18-关于block.html" class="article-date">
+  	<time datetime="2016-06-18T05:16:22.000Z" itemprop="datePublished">2016-06-18</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-06-18-关于block.html">关于block</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>__weak __typeof(self)weakSelf = self;
+self.backgroundTaskIdentifier = [application beginBackgroundTaskWithExpirationHandler:^{
+    __strong __typeof(weakSelf)strongSelf = weakSelf;
+}];
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/posts/uncategorized/2016-06-18-关于block.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-JS与OC交互" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/posts/uncategorized/2016-06-15-JS与OC交互.html" class="article-date">
+  	<time datetime="2016-06-15T06:34:01.000Z" itemprop="datePublished">2016-06-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-06-15-JS与OC交互.html">JS与OC交互</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>参考链接：<a href="http://blog.csdn.net/lwjok2007/article/details/47058795">http://blog.csdn.net/lwjok2007/article/details/47058795 </a></p>
+<pre><code>添加
+JavaScriptCore.framework
+
+#import &lt;JavaScriptCore/JavaScriptCore.h&gt; 
+</code></pre><p>js调用iOS分两种情况<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/posts/uncategorized/2016-06-15-JS与OC交互.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-一个问题" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/posts/uncategorized/2016-06-06-一个问题.html" class="article-date">
+  	<time datetime="2016-06-06T02:39:13.000Z" itemprop="datePublished">2016-06-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-06-06-一个问题.html">一个问题</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a name="fenced-code-block">今天帮别人看了一个问题。</a></p>
+<pre><code>具体情况是：初始化两个数组添加了同一组数据（Model），然后数组A传
+递到一个viewA里边，数组B传递到一个viewB里边。这时候ViewA中数组A
+里边的model更新了值。发现ViewB中得数组B中得model也更新了。
+
+指针问题。。
+开始以为是数组指针问题，后来对数组处理也不行。才发现两个数组里边的
+model 内存地址是一样的。。 
+自己的问题，记一下。
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-CocoaPods" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/posts/uncategorized/2016-06-06-CocoaPods.html" class="article-date">
+  	<time datetime="2016-06-06T02:17:57.000Z" itemprop="datePublished">2016-06-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-06-06-CocoaPods.html">CocoaPods</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a name="fenced-code-block">cocoapods 安装</a></p>
+<p>1&gt;.删除官方的ruby环境</p>
+<pre><code>gem sources --remove https://rubygems.org/
+</code></pre><p>2&gt;.等有反应之后再敲入以下命令</p>
+<pre><code>gem sources -a http://ruby.taobao.org/
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/posts/uncategorized/2016-06-06-CocoaPods.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-iOS面试题汇总" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/posts/uncategorized/2016-05-31-iOS面试题汇总.html" class="article-date">
+  	<time datetime="2016-05-31T09:58:22.000Z" itemprop="datePublished">2016-05-31</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-05-31-iOS面试题汇总.html">iOS面试题汇总</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>群里边看到了有人分享了这篇面试题，拿来主义。。。
+</code></pre><p>#阿里一面</p>
+<p>1.Android的activity</p>
+<p>2.Category支持添加属性与成员变量吗</p>
+<p>3.是否了解设计模式, 用过哪些</p>
+<p>4.iOS7之后, 蓝牙的围栏功能</p>
+<p>5.MVC是否了解?介绍下使用情况。</p>
+<p>6.MVC里面, View怎么通知到Model</p>
+<p>7.了解delegate吗?并介绍<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS面试题/">iOS面试题</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/posts/uncategorized/2016-05-31-iOS面试题汇总.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Framework-开发的那些事" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/posts/uncategorized/2016-05-26-Framework-开发的那些事.html" class="article-date">
+  	<time datetime="2016-05-26T08:27:43.000Z" itemprop="datePublished">2016-05-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-05-26-Framework-开发的那些事.html">Framework 开发的那些事</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-static-A-嵌套了static-B"><a href="#1-static-A-嵌套了static-B" class="headerlink" title="1.static A 嵌套了static B"></a>1.static A 嵌套了static B</h3><pre><code>1&gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
+报错：
+error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
+file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/usr/lib/libz.tbd is not an object file (not allowed in a library)
+</code></pre><p><img src="http://o7rvtx931.bkt.clouddn.com/image17CE12794-3913-4CE4-86E3-B6B5470A4F36.png" alt="报错信息"><br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/posts/uncategorized/2016-05-26-Framework-开发的那些事.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-磕磕碰碰2-1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/posts/uncategorized/2016-05-26-磕磕碰碰2-1.html" class="article-date">
+  	<time datetime="2016-05-26T05:46:56.000Z" itemprop="datePublished">2016-05-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-05-26-磕磕碰碰2-1.html">磕磕碰碰2.1</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>前提：正在做SDK（Framework）给客户集成
+就在前几天领导说要开发一个新版本，要实现一个功能：“给集成Framework_a的ipa文件替换成Framework_b，不需要重新打包ipa文件”。
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/posts/uncategorized/2016-05-26-磕磕碰碰2-1.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-hello" class="article article-type-post" itemscope itemprop="blogPost">
   

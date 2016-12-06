@@ -4,31 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Framework 开发的那些事 | Jade&#39;s Home</title>
+  <title>view切圆角 | Jade&#39;s Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.static A 嵌套了static B1&amp;gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
-报错：
-error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
-file: /Applica">
+  <meta name="description" content="123view.layer.cornerRadius = 5;//对view切圆角的角度view.layer.masksToBounds = YES;//这个等于YES。view里边的子view也会切相当于clipsToBouns = YES。//view.layer.masksToBounds = NO;//只切view的圆角不会切view里边view圆角">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Framework 开发的那些事">
-<meta property="og:url" content="http://imjade.github.io/posts/uncategorized/2016-05-26-Framework-开发的那些事.html">
+<meta property="og:title" content="view切圆角">
+<meta property="og:url" content="http://imjade.github.io/posts/uncategorized/2016-12-06-view切圆角.html">
 <meta property="og:site_name" content="Jade's Home">
-<meta property="og:description" content="1.static A 嵌套了static B1&amp;gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
-报错：
-error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
-file: /Applica">
-<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/image17CE12794-3913-4CE4-86E3-B6B5470A4F36.png">
-<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/7552CFF2-3577-4874-B18A-F9E1ECE57691.png">
-<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/95441BC2-0D41-4552-8FA9-F0DB4447BB84.png">
-<meta property="og:updated_time" content="2016-12-06T09:20:40.000Z">
+<meta property="og:description" content="123view.layer.cornerRadius = 5;//对view切圆角的角度view.layer.masksToBounds = YES;//这个等于YES。view里边的子view也会切相当于clipsToBouns = YES。//view.layer.masksToBounds = NO;//只切view的圆角不会切view里边view圆角">
+<meta property="og:updated_time" content="2016-12-06T10:02:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Framework 开发的那些事">
-<meta name="twitter:description" content="1.static A 嵌套了static B1&amp;gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
-报错：
-error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
-file: /Applica">
-<meta name="twitter:image" content="http://o7rvtx931.bkt.clouddn.com/image17CE12794-3913-4CE4-86E3-B6B5470A4F36.png">
+<meta name="twitter:title" content="view切圆角">
+<meta name="twitter:description" content="123view.layer.cornerRadius = 5;//对view切圆角的角度view.layer.masksToBounds = YES;//这个等于YES。view里边的子view也会切相当于clipsToBouns = YES。//view.layer.masksToBounds = NO;//只切view的圆角不会切view里边view圆角">
   
     <link rel="alternative" href="/atom.xml" title="Jade&#39;s Home" type="application/atom+xml">
   
@@ -196,11 +183,11 @@ file: /Applica">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-Framework-开发的那些事" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-view切圆角" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/posts/uncategorized/2016-05-26-Framework-开发的那些事.html" class="article-date">
-  	<time datetime="2016-05-26T08:27:43.000Z" itemprop="datePublished">2016-05-26</time>
+      <a href="/posts/uncategorized/2016-12-06-view切圆角.html" class="article-date">
+  	<time datetime="2016-12-06T09:58:31.000Z" itemprop="datePublished">2016-12-06</time>
 </a>
     </div>
   
@@ -213,7 +200,7 @@ file: /Applica">
         
   
     <h1 class="article-title" itemprop="name">
-      Framework 开发的那些事
+      view切圆角
     </h1>
   
 
@@ -233,15 +220,7 @@ file: /Applica">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-static-A-嵌套了static-B"><a href="#1-static-A-嵌套了static-B" class="headerlink" title="1.static A 嵌套了static B"></a>1.static A 嵌套了static B</h3><pre><code>1&gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
-报错：
-error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
-file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/usr/lib/libz.tbd is not an object file (not allowed in a library)
-</code></pre><p><img src="http://o7rvtx931.bkt.clouddn.com/image17CE12794-3913-4CE4-86E3-B6B5470A4F36.png" alt="报错信息"><br>    <a id="more"></a><br>    2&gt;.如果不添加dylib就会<br>    报错：<br>    ld: framework not found PywSdk for architecture x86_64<br>    clang: error: linker command failed with exit code 1 (use -v to see invocation)<br><img src="http://o7rvtx931.bkt.clouddn.com/7552CFF2-3577-4874-B18A-F9E1ECE57691.png" alt="报错信息"><br>    但是staticB中用到了 <a name="fenced-code-block">系统.Framework</a> 可以添加到staticA中<br>    设想：如果staticB中没有用到dylib库应该是可以static嵌套static吧</p>
-<h3 id="2-dynamic-A-嵌套-dynamic-B-static-B"><a href="#2-dynamic-A-嵌套-dynamic-B-static-B" class="headerlink" title="2.dynamic A 嵌套 dynamic B/static B"></a>2.dynamic A 嵌套 dynamic B/static B</h3><pre><code>1&gt;.因为dynamic是系统保存一份的。所以dynamic A中不能使用和一样的文件和全局文件。报文件重复错误，所以dynamicA中文件和全局变量要避免和dynamic B/static B中得一样。要是一定要用一样的文件要修改文件加个前缀。
-报错：
-</code></pre><p><img src="http://o7rvtx931.bkt.clouddn.com/95441BC2-0D41-4552-8FA9-F0DB4447BB84.png" alt="报错信息"></p>
-
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">view.layer.cornerRadius = 5;//对view切圆角的角度</span><br><span class="line">view.layer.masksToBounds = YES;//这个等于YES。view里边的子view也会切相当于clipsToBouns = YES。</span><br><span class="line">//view.layer.masksToBounds = NO;//只切view的圆角不会切view里边view圆角</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -250,18 +229,18 @@ file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Dev
     
 <nav id="article-nav">
   
-    <a href="/posts/uncategorized/2016-05-31-iOS面试题汇总.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/posts/uncategorized/2016-12-06-根据内存地址定位错误.html" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          iOS面试题汇总
+          根据内存地址定位错误
         
       </div>
     </a>
   
   
-    <a href="/posts/uncategorized/2016-05-26-磕磕碰碰2-1.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">磕磕碰碰2.1</div>
+    <a href="/posts/uncategorized/2016-12-06-时间戳（毫秒）转date.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">时间戳（毫秒）转date</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -296,7 +275,7 @@ file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Dev
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Framework-开发的那些事" data-title="Framework 开发的那些事" data-url="http://imjade.github.io/posts/uncategorized/2016-05-26-Framework-开发的那些事.html"></div>
+	<div class="ds-thread" data-thread-key="view切圆角" data-title="view切圆角" data-url="http://imjade.github.io/posts/uncategorized/2016-12-06-view切圆角.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

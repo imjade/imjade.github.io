@@ -4,31 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Framework 开发的那些事 | Jade&#39;s Home</title>
+  <title>时间戳（毫秒）转date | Jade&#39;s Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.static A 嵌套了static B1&amp;gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
-报错：
-error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
-file: /Applica">
+  <meta name="description" content="1.获取毫秒时间戳
+UInt64 recordTime = [[NSDate date] timeIntervalSince1970]*1000;
+[[NSDate date] timeIntervalSince1970] 是可以获取到后面的毫秒 微秒的 ，只是在保存的时候省略掉了， 如一个时间戳不省略的情况下为 1395399556.862046 ，省略掉后为一般所见 1395399556 。所">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Framework 开发的那些事">
-<meta property="og:url" content="http://imjade.github.io/posts/uncategorized/2016-05-26-Framework-开发的那些事.html">
+<meta property="og:title" content="时间戳（毫秒）转date">
+<meta property="og:url" content="http://imjade.github.io/posts/uncategorized/2016-12-06-时间戳（毫秒）转date.html">
 <meta property="og:site_name" content="Jade's Home">
-<meta property="og:description" content="1.static A 嵌套了static B1&amp;gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
-报错：
-error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
-file: /Applica">
-<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/image17CE12794-3913-4CE4-86E3-B6B5470A4F36.png">
-<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/7552CFF2-3577-4874-B18A-F9E1ECE57691.png">
-<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/95441BC2-0D41-4552-8FA9-F0DB4447BB84.png">
-<meta property="og:updated_time" content="2016-12-06T09:20:40.000Z">
+<meta property="og:description" content="1.获取毫秒时间戳
+UInt64 recordTime = [[NSDate date] timeIntervalSince1970]*1000;
+[[NSDate date] timeIntervalSince1970] 是可以获取到后面的毫秒 微秒的 ，只是在保存的时候省略掉了， 如一个时间戳不省略的情况下为 1395399556.862046 ，省略掉后为一般所见 1395399556 。所">
+<meta property="og:updated_time" content="2016-12-06T09:55:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Framework 开发的那些事">
-<meta name="twitter:description" content="1.static A 嵌套了static B1&amp;gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
-报错：
-error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
-file: /Applica">
-<meta name="twitter:image" content="http://o7rvtx931.bkt.clouddn.com/image17CE12794-3913-4CE4-86E3-B6B5470A4F36.png">
+<meta name="twitter:title" content="时间戳（毫秒）转date">
+<meta name="twitter:description" content="1.获取毫秒时间戳
+UInt64 recordTime = [[NSDate date] timeIntervalSince1970]*1000;
+[[NSDate date] timeIntervalSince1970] 是可以获取到后面的毫秒 微秒的 ，只是在保存的时候省略掉了， 如一个时间戳不省略的情况下为 1395399556.862046 ，省略掉后为一般所见 1395399556 。所">
   
     <link rel="alternative" href="/atom.xml" title="Jade&#39;s Home" type="application/atom+xml">
   
@@ -196,11 +189,11 @@ file: /Applica">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-Framework-开发的那些事" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-时间戳（毫秒）转date" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/posts/uncategorized/2016-05-26-Framework-开发的那些事.html" class="article-date">
-  	<time datetime="2016-05-26T08:27:43.000Z" itemprop="datePublished">2016-05-26</time>
+      <a href="/posts/uncategorized/2016-12-06-时间戳（毫秒）转date.html" class="article-date">
+  	<time datetime="2016-12-06T09:51:05.000Z" itemprop="datePublished">2016-12-06</time>
 </a>
     </div>
   
@@ -213,7 +206,7 @@ file: /Applica">
         
   
     <h1 class="article-title" itemprop="name">
-      Framework 开发的那些事
+      时间戳（毫秒）转date
     </h1>
   
 
@@ -233,15 +226,17 @@ file: /Applica">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-static-A-嵌套了static-B"><a href="#1-static-A-嵌套了static-B" class="headerlink" title="1.static A 嵌套了static B"></a>1.static A 嵌套了static B</h3><pre><code>1&gt;.因为static B中使用了一些动态库(dylib) 但是staticA中无法添加dylib文件 
-报错：
-error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
-file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/usr/lib/libz.tbd is not an object file (not allowed in a library)
-</code></pre><p><img src="http://o7rvtx931.bkt.clouddn.com/image17CE12794-3913-4CE4-86E3-B6B5470A4F36.png" alt="报错信息"><br>    <a id="more"></a><br>    2&gt;.如果不添加dylib就会<br>    报错：<br>    ld: framework not found PywSdk for architecture x86_64<br>    clang: error: linker command failed with exit code 1 (use -v to see invocation)<br><img src="http://o7rvtx931.bkt.clouddn.com/7552CFF2-3577-4874-B18A-F9E1ECE57691.png" alt="报错信息"><br>    但是staticB中用到了 <a name="fenced-code-block">系统.Framework</a> 可以添加到staticA中<br>    设想：如果staticB中没有用到dylib库应该是可以static嵌套static吧</p>
-<h3 id="2-dynamic-A-嵌套-dynamic-B-static-B"><a href="#2-dynamic-A-嵌套-dynamic-B-static-B" class="headerlink" title="2.dynamic A 嵌套 dynamic B/static B"></a>2.dynamic A 嵌套 dynamic B/static B</h3><pre><code>1&gt;.因为dynamic是系统保存一份的。所以dynamic A中不能使用和一样的文件和全局文件。报文件重复错误，所以dynamicA中文件和全局变量要避免和dynamic B/static B中得一样。要是一定要用一样的文件要修改文件加个前缀。
-报错：
-</code></pre><p><img src="http://o7rvtx931.bkt.clouddn.com/95441BC2-0D41-4552-8FA9-F0DB4447BB84.png" alt="报错信息"></p>
-
+        <p><strong>1.获取毫秒时间戳</strong></p>
+<pre><code>UInt64 recordTime = [[NSDate date] timeIntervalSince1970]*1000;
+</code></pre><p><code>[[NSDate date] timeIntervalSince1970] 是可以获取到后面的毫秒 微秒的 ，只是在保存的时候省略掉了， 如一个时间戳不省略的情况下为 1395399556.862046 ，省略掉后为一般所见 1395399556 。所以想取得毫秒时用获取到的时间戳 *1000 ，想取得微秒时 用取到的时间戳 * 1000 * 1000</code></p>
+<p><strong>2.毫秒时间戳转NSDate</strong></p>
+<pre><code>NSString * timeStampString = @&quot;1423189125873&quot;;
+NSTimeInterval _interval=[timeStampString doubleValue] / 1000.0;
+NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
+NSDateFormatter *objDateformat = [[NSDateFormatter alloc] init];
+[objDateformat setDateFormat:@&quot;yyyy-MM-dd HH:mm:ss.SSS&quot;];
+NSLog(@&quot;%@&quot;, [objDateformat stringFromDate: date]);
+</code></pre>
       
     </div>
     
@@ -250,18 +245,18 @@ file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Dev
     
 <nav id="article-nav">
   
-    <a href="/posts/uncategorized/2016-05-31-iOS面试题汇总.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/posts/uncategorized/2016-12-06-view切圆角.html" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          iOS面试题汇总
+          view切圆角
         
       </div>
     </a>
   
   
-    <a href="/posts/uncategorized/2016-05-26-磕磕碰碰2-1.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">磕磕碰碰2.1</div>
+    <a href="/posts/uncategorized/2016-12-06-NSDataDetector.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">NSDataDetector</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -296,7 +291,7 @@ file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Dev
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Framework-开发的那些事" data-title="Framework 开发的那些事" data-url="http://imjade.github.io/posts/uncategorized/2016-05-26-Framework-开发的那些事.html"></div>
+	<div class="ds-thread" data-thread-key="时间戳（毫秒）转date" data-title="时间戳（毫秒）转date" data-url="http://imjade.github.io/posts/uncategorized/2016-12-06-时间戳（毫秒）转date.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
