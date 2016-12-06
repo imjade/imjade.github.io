@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   
+  <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://imjade.github.io">
   <title>Jade&#39;s Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="This is My Home. 写些技术的，聊点家常的。">
@@ -19,21 +21,22 @@
     <link rel="alternative" href="/atom.xml" title="Jade&#39;s Home" type="application/atom+xml">
   
   
-    <link rel="icon" href="http://o7rvtx931.bkt.clouddn.com/resizeApi.png">
+    <link rel="icon" href="http://o7rvtx931.bkt.clouddn.com/22273099.png">
   
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/main.css?v=4.0.0.css">
+  
+
 </head>
 
 <body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      <div class="overlay"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			
-			<img lazy-src="http://o7rvtx931.bkt.clouddn.com/5c6defebjw8epti0r9noaj20xc0y1n0x.jpg" class="js-avatar">
-			
+			<img src="http://o7rvtx931.bkt.clouddn.com/5c6defebjw8epti0r9noaj20xc0y1n0x.jpg" class="js-avatar">
 		</a>
 
 		<hgroup>
@@ -42,116 +45,59 @@
 
 		
 
-		
-			<div class="switch-btn">
-				<div class="icon">
-					<div class="icon-ctn">
-						<div class="icon-wrap icon-house" data-idx="0">
-							<div class="birdhouse"></div>
-							<div class="birdhouse_holes"></div>
-						</div>
-						<div class="icon-wrap icon-ribbon hide" data-idx="1">
-							<div class="ribbon"></div>
-						</div>
-						
-						<div class="icon-wrap icon-link hide" data-idx="2">
-							<div class="loopback_l"></div>
-							<div class="loopback_r"></div>
-						</div>
-						
-						
-						<div class="icon-wrap icon-me hide" data-idx="3">
-							<div class="user"></div>
-							<div class="shoulder"></div>
-						</div>
-						
-					</div>
-					
-				</div>
-				<div class="tips-box hide">
-					<div class="tips-arrow"></div>
-					<ul class="tips-inner">
-						<li>Menu</li>
-						<li>Tags</li>
-						
-						<li>Links</li>
-						
-						
-						<li>Über</li>
-						
-					</ul>
-				</div>
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/archives">所有文章</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a data-idx="0" q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a data-idx="1" q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a data-idx="2" q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/imjade" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/u/2855196295/home?wvr=5" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/xiao-tao-36-64" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
 			</div>
-		
-
-		<div class="switch-area">
-			<div class="switch-wrap">
-				<section class="switch-part switch-part1">
-					<nav class="header-menu">
-						<ul>
-						
-							<li><a href="/">主页</a></li>
-				        
-							<li><a href="/archives">所有文章</a></li>
-				        
-						</ul>
-					</nav>
-					<nav class="header-nav">
-						<div class="social">
-							
-								<a class="github" target="_blank" href="https://github.com/imjade" title="github">github</a>
-					        
-								<a class="weibo" target="_blank" href="http://weibo.com/u/2855196295/home?wvr=5" title="weibo">weibo</a>
-					        
-								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/xiao-tao-36-64" title="zhihu">zhihu</a>
-					        
-						</div>
-					</nav>
-				</section>
-				
-				
-				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Jenkins/" style="font-size: 10px;">Jenkins</a> <a href="/tags/iOS-记录/" style="font-size: 20px;">iOS 记录</a> <a href="/tags/iOS面试题/" style="font-size: 10px;">iOS面试题</a>
-					</div>
-				</section>
-				
-				
-				
-				<section class="switch-part switch-part3">
-					<div id="js-friends">
-					
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://weibo.com/u/2855196295/home?wvr=5">Jade于小涛</a>
-			        
-			        </div>
-				</section>
-				
-
-				
-				
-				<section class="switch-part switch-part4">
-				
-					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
-				</section>
-				
-			</div>
-		</div>
-	</header>				
+		</nav>
+	</header>		
 </div>
 
     </div>
-    <div class="mid-col">
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       <nav id="mobile-nav">
   	<div class="overlay">
-  		<div class="slider-trigger"></div>
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
   		<h1 class="header-author js-mobile-header hide">Jade</h1>
   	</div>
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-			
-				<img lazy-src="http://o7rvtx931.bkt.clouddn.com/5c6defebjw8epti0r9noaj20xc0y1n0x.jpg" class="js-avatar">
-			
+				<img src="http://o7rvtx931.bkt.clouddn.com/5c6defebjw8epti0r9noaj20xc0y1n0x.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author">Jade</h1>
@@ -164,17 +110,19 @@
 		        
 					<li><a href="/archives">所有文章</a></li>
 		        
-		        <div class="clearfix"></div>
+		        
+		        	<li><a href="/archives">所有文章</a></li>
+		        
 				</ul>
 			</nav>
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="https://github.com/imjade" title="github">github</a>
+						<a class="github" target="_blank" href="https://github.com/imjade" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="http://weibo.com/u/2855196295/home?wvr=5" title="weibo">weibo</a>
+						<a class="weibo" target="_blank" href="http://weibo.com/u/2855196295/home?wvr=5" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/xiao-tao-36-64" title="zhihu">zhihu</a>
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/xiao-tao-36-64" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 				</div>
 			</nav>
@@ -182,20 +130,16 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            
   
-    <article id="post-关于block" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/uncategorized/2016-06-18-关于block.html" class="article-date">
-  	<time datetime="2016-06-18T05:16:22.000Z" itemprop="datePublished">2016-06-18</time>
-</a>
-    </div>
-  
+    <article id="post-关于block" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
@@ -205,8 +149,10 @@
     </h1>
   
 
+        <a href="/posts/uncategorized/2016-06-18-关于block.html" class="archive-article-date">
+  	<time datetime="2016-06-18T05:16:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-18</time>
+</a>
       </header>
-      
     
     <div class="article-entry" itemprop="articleBody">
       
@@ -215,13 +161,16 @@ self.backgroundTaskIdentifier = [application beginBackgroundTaskWithExpirationHa
     __strong __typeof(weakSelf)strongSelf = weakSelf;
 }];
 </code></pre>
+        <a class="article-more-a"  href="/posts/uncategorized/2016-06-18-关于block.html#more">more >></a>
+      
+
       
     </div>
-    
     <div class="article-info article-info-index">
       
       
 	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
 	</div>
 
@@ -229,14 +178,14 @@ self.backgroundTaskIdentifier = [application beginBackgroundTaskWithExpirationHa
 
       
         <p class="article-more-link">
-          <a  href="/posts/uncategorized/2016-06-18-关于block.html#more">more >></a>
+          <a class="article-more-a" href="/posts/uncategorized/2016-06-18-关于block.html">展开全文 >></a>
         </p>
+      
+
       
       <div class="clearfix"></div>
     </div>
-    
   </div>
-  
 </article>
 
 
@@ -246,20 +195,9 @@ self.backgroundTaskIdentifier = [application beginBackgroundTaskWithExpirationHa
 
 
 
-
   
-    <article id="post-JS与OC交互" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/uncategorized/2016-06-15-JS与OC交互.html" class="article-date">
-  	<time datetime="2016-06-15T06:34:01.000Z" itemprop="datePublished">2016-06-15</time>
-</a>
-    </div>
-  
+    <article id="post-JS与OC交互" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
@@ -269,8 +207,10 @@ self.backgroundTaskIdentifier = [application beginBackgroundTaskWithExpirationHa
     </h1>
   
 
+        <a href="/posts/uncategorized/2016-06-15-JS与OC交互.html" class="archive-article-date">
+  	<time datetime="2016-06-15T06:34:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-15</time>
+</a>
       </header>
-      
     
     <div class="article-entry" itemprop="articleBody">
       
@@ -280,13 +220,16 @@ JavaScriptCore.framework
 
 #import &lt;JavaScriptCore/JavaScriptCore.h&gt; 
 </code></pre><p>js调用iOS分两种情况<br>
+        <a class="article-more-a"  href="/posts/uncategorized/2016-06-15-JS与OC交互.html#more">more >></a>
+      
+
       
     </div>
-    
     <div class="article-info article-info-index">
       
       
 	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
 	</div>
 
@@ -294,14 +237,14 @@ JavaScriptCore.framework
 
       
         <p class="article-more-link">
-          <a  href="/posts/uncategorized/2016-06-15-JS与OC交互.html#more">more >></a>
+          <a class="article-more-a" href="/posts/uncategorized/2016-06-15-JS与OC交互.html">展开全文 >></a>
         </p>
+      
+
       
       <div class="clearfix"></div>
     </div>
-    
   </div>
-  
 </article>
 
 
@@ -311,20 +254,9 @@ JavaScriptCore.framework
 
 
 
-
   
-    <article id="post-一个问题" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/uncategorized/2016-06-06-一个问题.html" class="article-date">
-  	<time datetime="2016-06-06T02:39:13.000Z" itemprop="datePublished">2016-06-06</time>
-</a>
-    </div>
-  
+    <article id="post-一个问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
@@ -334,8 +266,10 @@ JavaScriptCore.framework
     </h1>
   
 
+        <a href="/posts/uncategorized/2016-06-06-一个问题.html" class="archive-article-date">
+  	<time datetime="2016-06-06T02:39:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-06</time>
+</a>
       </header>
-      
     
     <div class="article-entry" itemprop="articleBody">
       
@@ -350,23 +284,29 @@ model 内存地址是一样的。。
 自己的问题，记一下。
 </code></pre>
       
+
+      
     </div>
-    
     <div class="article-info article-info-index">
       
       
 	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
 	</div>
 
       
 
       
+        <p class="article-more-link">
+          <a class="article-more-a" href="/posts/uncategorized/2016-06-06-一个问题.html">展开全文 >></a>
+        </p>
+      
+
+      
       <div class="clearfix"></div>
     </div>
-    
   </div>
-  
 </article>
 
 
@@ -376,20 +316,9 @@ model 内存地址是一样的。。
 
 
 
-
   
-    <article id="post-CocoaPods" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/uncategorized/2016-06-06-CocoaPods.html" class="article-date">
-  	<time datetime="2016-06-06T02:17:57.000Z" itemprop="datePublished">2016-06-06</time>
-</a>
-    </div>
-  
+    <article id="post-CocoaPods" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
@@ -399,8 +328,10 @@ model 内存地址是一样的。。
     </h1>
   
 
+        <a href="/posts/uncategorized/2016-06-06-CocoaPods.html" class="archive-article-date">
+  	<time datetime="2016-06-06T02:17:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-06</time>
+</a>
       </header>
-      
     
     <div class="article-entry" itemprop="articleBody">
       
@@ -410,13 +341,16 @@ model 内存地址是一样的。。
 </code></pre><p>2&gt;.等有反应之后再敲入以下命令</p>
 <pre><code>gem sources -a http://ruby.taobao.org/
 </code></pre>
+        <a class="article-more-a"  href="/posts/uncategorized/2016-06-06-CocoaPods.html#more">more >></a>
+      
+
       
     </div>
-    
     <div class="article-info article-info-index">
       
       
 	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
 	</div>
 
@@ -424,14 +358,14 @@ model 内存地址是一样的。。
 
       
         <p class="article-more-link">
-          <a  href="/posts/uncategorized/2016-06-06-CocoaPods.html#more">more >></a>
+          <a class="article-more-a" href="/posts/uncategorized/2016-06-06-CocoaPods.html">展开全文 >></a>
         </p>
+      
+
       
       <div class="clearfix"></div>
     </div>
-    
   </div>
-  
 </article>
 
 
@@ -441,20 +375,9 @@ model 内存地址是一样的。。
 
 
 
-
   
-    <article id="post-iOS面试题汇总" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/uncategorized/2016-05-31-iOS面试题汇总.html" class="article-date">
-  	<time datetime="2016-05-31T09:58:22.000Z" itemprop="datePublished">2016-05-31</time>
-</a>
-    </div>
-  
+    <article id="post-iOS面试题汇总" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
@@ -464,8 +387,10 @@ model 内存地址是一样的。。
     </h1>
   
 
+        <a href="/posts/uncategorized/2016-05-31-iOS面试题汇总.html" class="archive-article-date">
+  	<time datetime="2016-05-31T09:58:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-31</time>
+</a>
       </header>
-      
     
     <div class="article-entry" itemprop="articleBody">
       
@@ -478,13 +403,16 @@ model 内存地址是一样的。。
 <p>5.MVC是否了解?介绍下使用情况。</p>
 <p>6.MVC里面, View怎么通知到Model</p>
 <p>7.了解delegate吗?并介绍<br>
+        <a class="article-more-a"  href="/posts/uncategorized/2016-05-31-iOS面试题汇总.html#more">more >></a>
+      
+
       
     </div>
-    
     <div class="article-info article-info-index">
       
       
 	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS面试题/">iOS面试题</a></li></ul>
 	</div>
 
@@ -492,14 +420,14 @@ model 内存地址是一样的。。
 
       
         <p class="article-more-link">
-          <a  href="/posts/uncategorized/2016-05-31-iOS面试题汇总.html#more">more >></a>
+          <a class="article-more-a" href="/posts/uncategorized/2016-05-31-iOS面试题汇总.html">展开全文 >></a>
         </p>
+      
+
       
       <div class="clearfix"></div>
     </div>
-    
   </div>
-  
 </article>
 
 
@@ -509,20 +437,9 @@ model 内存地址是一样的。。
 
 
 
-
   
-    <article id="post-Framework-开发的那些事" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/uncategorized/2016-05-26-Framework-开发的那些事.html" class="article-date">
-  	<time datetime="2016-05-26T08:27:43.000Z" itemprop="datePublished">2016-05-26</time>
-</a>
-    </div>
-  
+    <article id="post-Framework-开发的那些事" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
@@ -532,8 +449,10 @@ model 内存地址是一样的。。
     </h1>
   
 
+        <a href="/posts/uncategorized/2016-05-26-Framework-开发的那些事.html" class="archive-article-date">
+  	<time datetime="2016-05-26T08:27:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-26</time>
+</a>
       </header>
-      
     
     <div class="article-entry" itemprop="articleBody">
       
@@ -542,13 +461,16 @@ model 内存地址是一样的。。
 error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: 
 file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/usr/lib/libz.tbd is not an object file (not allowed in a library)
 </code></pre><p><img src="http://o7rvtx931.bkt.clouddn.com/image17CE12794-3913-4CE4-86E3-B6B5470A4F36.png" alt="报错信息"><br>
+        <a class="article-more-a"  href="/posts/uncategorized/2016-05-26-Framework-开发的那些事.html#more">more >></a>
+      
+
       
     </div>
-    
     <div class="article-info article-info-index">
       
       
 	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
 	</div>
 
@@ -556,14 +478,14 @@ file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Dev
 
       
         <p class="article-more-link">
-          <a  href="/posts/uncategorized/2016-05-26-Framework-开发的那些事.html#more">more >></a>
+          <a class="article-more-a" href="/posts/uncategorized/2016-05-26-Framework-开发的那些事.html">展开全文 >></a>
         </p>
+      
+
       
       <div class="clearfix"></div>
     </div>
-    
   </div>
-  
 </article>
 
 
@@ -573,20 +495,9 @@ file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Dev
 
 
 
-
   
-    <article id="post-磕磕碰碰2-1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/uncategorized/2016-05-26-磕磕碰碰2-1.html" class="article-date">
-  	<time datetime="2016-05-26T05:46:56.000Z" itemprop="datePublished">2016-05-26</time>
-</a>
-    </div>
-  
+    <article id="post-磕磕碰碰2-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
@@ -596,21 +507,26 @@ file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Dev
     </h1>
   
 
+        <a href="/posts/uncategorized/2016-05-26-磕磕碰碰2-1.html" class="archive-article-date">
+  	<time datetime="2016-05-26T05:46:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-26</time>
+</a>
       </header>
-      
     
     <div class="article-entry" itemprop="articleBody">
       
         <pre><code>前提：正在做SDK（Framework）给客户集成
 就在前几天领导说要开发一个新版本，要实现一个功能：“给集成Framework_a的ipa文件替换成Framework_b，不需要重新打包ipa文件”。
 </code></pre>
+        <a class="article-more-a"  href="/posts/uncategorized/2016-05-26-磕磕碰碰2-1.html#more">more >></a>
+      
+
       
     </div>
-    
     <div class="article-info article-info-index">
       
       
 	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
 	</div>
 
@@ -618,14 +534,14 @@ file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Dev
 
       
         <p class="article-more-link">
-          <a  href="/posts/uncategorized/2016-05-26-磕磕碰碰2-1.html#more">more >></a>
+          <a class="article-more-a" href="/posts/uncategorized/2016-05-26-磕磕碰碰2-1.html">展开全文 >></a>
         </p>
+      
+
       
       <div class="clearfix"></div>
     </div>
-    
   </div>
-  
 </article>
 
 
@@ -635,20 +551,9 @@ file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Dev
 
 
 
-
   
-    <article id="post-hello" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/uncategorized/2016-05-16-hello.html" class="article-date">
-  	<time datetime="2016-05-16T10:08:01.000Z" itemprop="datePublished">2016-05-16</time>
-</a>
-    </div>
-  
+    <article id="post-hello" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
@@ -658,8 +563,10 @@ file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Dev
     </h1>
   
 
+        <a href="/posts/uncategorized/2016-05-16-hello.html" class="archive-article-date">
+  	<time datetime="2016-05-16T10:08:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-16</time>
+</a>
       </header>
-      
     
     <div class="article-entry" itemprop="articleBody">
       
@@ -676,25 +583,30 @@ file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Dev
     生成framework二进制文件在sss/abc.framework下
 </code></pre>
       
+
+      
     </div>
-    
     <div class="article-info article-info-index">
       
       
 	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
 	</div>
 
       
 
       
+        <p class="article-more-link">
+          <a class="article-more-a" href="/posts/uncategorized/2016-05-16-hello.html">展开全文 >></a>
+        </p>
+      
+
+      
       <div class="clearfix"></div>
     </div>
-    
   </div>
-  
 </article>
-
 
 
 
@@ -709,7 +621,11 @@ file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Dev
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
     </nav>
   
-</div>
+
+
+          </div>
+        </div>
+      </div>
       <footer id="footer">
   <div class="outer">
     <div id="footer-info">
@@ -723,52 +639,185 @@ file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Dev
   </div>
 </footer>
     </div>
-    
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-
-<script>
+    <script>
 	var yiliaConfig = {
-		fancybox: true,
-		mathjax: true,
-		animate: true,
+		mathjax: false,
 		isHome: true,
 		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: false
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
 	}
 </script>
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-<script src="/js/main.js"></script>
+
+<script src="/./main.js?v=4.0.0.js"></script>
 
 
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">iOS 记录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">Jenkins</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">iOS面试题</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
 
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="http://weibo.com/u/2855196295/home?wvr=5" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Jade于小涛</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
 
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">一个普通的不想普通程序员。</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
 
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';                 
-    }       
-});
-</script>
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
 
+            <div class="pswp__top-bar">
 
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
   </div>
 </body>
 </html>
