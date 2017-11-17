@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>IPA Automatic Resign | Jade&#39;s</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一个自动重签ipa的需求。 1.https://github.com/maciekish/iReSign 一开始找到了这个自动重签开源工具。可以实现半自动的重签功能。但是并不能满足需求。继续吧 2.找啊找啊，找。。发现所有的工具的源码都是归到了这几步命令。 Step1 :  unzip YourApp.ipa Step">
+<meta name="keywords" content="iOS 记录">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IPA Automatic Resign">
+<meta property="og:url" content="http://imjade.github.io/posts/default/2016-07-14-IPA-Resign.html">
+<meta property="og:site_name" content="Jade&#39;s">
+<meta property="og:description" content="一个自动重签ipa的需求。 1.https://github.com/maciekish/iReSign 一开始找到了这个自动重签开源工具。可以实现半自动的重签功能。但是并不能满足需求。继续吧 2.找啊找啊，找。。发现所有的工具的源码都是归到了这几步命令。 Step1 :  unzip YourApp.ipa Step2:  rm -rf Payload/YourApp.app/_CodeSign">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-17T02:23:17.232Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IPA Automatic Resign">
+<meta name="twitter:description" content="一个自动重签ipa的需求。 1.https://github.com/maciekish/iReSign 一开始找到了这个自动重签开源工具。可以实现半自动的重签功能。但是并不能满足需求。继续吧 2.找啊找啊，找。。发现所有的工具的源码都是归到了这几步命令。 Step1 :  unzip YourApp.ipa Step2:  rm -rf Payload/YourApp.app/_CodeSign">
+  
+    <link rel="alternative" href="/atom.xml" title="Jade&#39;s" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://o7rvtx931.bkt.clouddn.com/resizeApi.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://o7rvtx931.bkt.clouddn.com/5c6defebjw8epti0r9noaj20xc0y1n0x.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Jade</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">some time some tings</p>
+		
+
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/menu">目录</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/about">关于</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/imjade" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/2855196295/home?wvr=5" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/xiao-tao-36-64" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://weibo.com/u/2855196295/home?wvr=5">Jade于小涛</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">一个普通的不想普通程序员。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Jade</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://o7rvtx931.bkt.clouddn.com/5c6defebjw8epti0r9noaj20xc0y1n0x.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Jade</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">some time some tings</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/menu">目录</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/about">关于</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/imjade" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/2855196295/home?wvr=5" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/xiao-tao-36-64" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-IPA-Resign" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/posts/default/2016-07-14-IPA-Resign.html" class="article-date">
+  	<time datetime="2016-07-14T06:20:11.000Z" itemprop="datePublished">2016-07-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      IPA Automatic Resign
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a>一个自动重签ipa的需求。</a></p>
+<p>1.<a href="https://github.com/maciekish/iReSign" target="_blank" rel="noopener">https://github.com/maciekish/iReSign</a> 一开始找到了这个自动重签开源工具。可以实现半自动的重签功能。但是并不能满足需求。继续吧</p>
+<p>2.找啊找啊，找。。发现所有的工具的源码都是归到了这几步命令。</p>
+<pre><code>Step1 : 
+unzip YourApp.ipa
+Step2: 
+rm -rf Payload/YourApp.app/_CodeSignature
+Step3: 
+cp InHouse.mobileprovision Payload/YourApp.app/embedded.mobileprovision
+Step4: 
+/usr/bin/codesign -f -s &quot;iPhone Distribution: YourCompanyName&quot; --resource-rules Payload/YourApp.app/ResourceRules.plist Payload/YourApp.app
+Step 5: 
+zip -r YourApp_inhouse.ipa Payload
+* InHouse.mobileprovision 是你要用来签名的provision文件
+* iPhone Distribution: YourCompanyName 是指该签名对应的证书的名字。这个可以在keychain中找到
+</code></pre><p>   <a>但是会遇ResourceRules.plist找不到的问题，要设置</a></p>
+<pre><code>Click on your project &gt; Targets &gt; Select your target &gt; Build Settings &gt;
+Code Signing Resource Rules Path
+and add :
+$(SDKROOT)/ResourceRules.plist
+</code></pre><p><a>但是ipa中包含Framework and Plugins 也不能重签成功。</a><br><a id="more"></a><br>3.<a href="https://github.com/ikalnitsky/iresign" target="_blank" rel="noopener">https://github.com/ikalnitsky/iresign</a> 一个Python 重签脚本 一样的不能重签包含Framework and Plugins 的ipa</p>
+<p>4.就在放弃要打算重新看回iReSign源码做外部调用iReSign程序来坐自动重签时，又Google到一个脚本</p>
+<p><a href="http://www.xgiovio.com/blog-photos-videos-other/blog/resign-your-ios-ipa-frameworks-and-plugins-included/" target="_blank" rel="noopener">http://www.xgiovio.com/blog-photos-videos-other/blog/resign-your-ios-ipa-frameworks-and-plugins-included/</a></p>
+<p>在signall.sh里边修改</p>
+<pre><code>signscript=&quot;/path/to/sign.sh&quot;                      #signscript脚本路径
+
+ipasourcefolder=&quot;path/to/ipas/source/folder&quot;       #ipa文件的路径
+
+ipadestfolder=&quot;/path/to/ipas/destinations/folder/&quot; #生成重签ipa路径
+
+developer1=&quot;iPhone Developer: xxxxx (xxxxx)&quot;       #是指该签名对应的证书的名字。这个可以在keychain中找到
+
+mobileprovision1=&quot;/path/to/mobile/provision&quot;       #要重签的xx.mobileprovision文件路径
+
+cd $ipasourcefolder
+
+find -d . -type f -name &quot;*.ipa&quot;&gt; files.txt
+
+while IFS=&apos;&apos; read -r line || [[ -n &quot;$line&quot; ]]; do
+
+filename=$(basename &quot;$line&quot; .ipa)
+echo &quot;Ipa: $filename&quot;
+#_dev1_______
+output=$ipadestfolder$filename
+output+=&quot;_signed_dev1.ipa&quot;                     #生成重签ipa的后缀名称
+&quot;$signscript&quot; &quot;$line&quot; &quot;$developer1&quot; &quot;$mobileprovision1&quot; &quot;$output&quot;
+
+done &lt; files.txt
+rm files.txt
+</code></pre><p>源码:<a href="https://bitbucket.org/xgiovio/ios-ipa-resign/src" target="_blank" rel="noopener">https://bitbucket.org/xgiovio/ios-ipa-resign/src</a></p>
+<p>终于是可以了。</p>
+<p>相关链接：</p>
+<p><a href="https://github.com/maciekish/iReSign" target="_blank" rel="noopener">https://github.com/maciekish/iReSign</a></p>
+<p><a href="http://www.lai18.com/content/755251.html" target="_blank" rel="noopener">http://www.lai18.com/content/755251.html</a></p>
+<p><a href="http://stackoverflow.com/questions/26497863/xcode-6-1-error-while-building-ipa" target="_blank" rel="noopener">http://stackoverflow.com/questions/26497863/xcode-6-1-error-while-building-ipa</a></p>
+<p><a href="http://www.xgiovio.com/blog-photos-videos-other/blog/resign-your-ios-ipa-frameworks-and-plugins-included/" target="_blank" rel="noopener">http://www.xgiovio.com/blog-photos-videos-other/blog/resign-your-ios-ipa-frameworks-and-plugins-included/</a></p>
+<p><a href="http://stackoverflow.com/questions/26497863/xcode-6-1-error-while-building-ipa" target="_blank" rel="noopener">http://stackoverflow.com/questions/26497863/xcode-6-1-error-while-building-ipa</a></p>
+<p><a href="https://www.google.com.hk/?gws_rd=ssl" target="_blank" rel="noopener">https://www.google.com.hk/?gws_rd=ssl</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/posts/default/2016-07-14-const-static-extern.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          const static extern
+        
+      </div>
+    </a>
+  
+  
+    <a href="/posts/default/2016-06-18-关于block.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于block</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="IPA-Resign" data-title="IPA Automatic Resign" data-url="http://imjade.github.io/posts/default/2016-07-14-IPA-Resign.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"imjade"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Jade
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

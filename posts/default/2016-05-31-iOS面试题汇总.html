@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>iOS面试题汇总 | Jade&#39;s</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="群里边看到了有人分享了这篇面试题，拿来主义。。。 #阿里一面 1.Android的activity 2.Category支持添加属性与成员变量吗 3.是否了解设计模式, 用过哪些 4.iOS7之后, 蓝牙的围栏功能 5.MVC是否了解?介绍下使用情况。 6.MVC里面, View怎么通知到Model 7.了解deleg">
+<meta name="keywords" content="iOS面试题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS面试题汇总">
+<meta property="og:url" content="http://imjade.github.io/posts/default/2016-05-31-iOS面试题汇总.html">
+<meta property="og:site_name" content="Jade&#39;s">
+<meta property="og:description" content="群里边看到了有人分享了这篇面试题，拿来主义。。。 #阿里一面 1.Android的activity 2.Category支持添加属性与成员变量吗 3.是否了解设计模式, 用过哪些 4.iOS7之后, 蓝牙的围栏功能 5.MVC是否了解?介绍下使用情况。 6.MVC里面, View怎么通知到Model 7.了解delegate吗?并介绍">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-17T05:30:06.388Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS面试题汇总">
+<meta name="twitter:description" content="群里边看到了有人分享了这篇面试题，拿来主义。。。 #阿里一面 1.Android的activity 2.Category支持添加属性与成员变量吗 3.是否了解设计模式, 用过哪些 4.iOS7之后, 蓝牙的围栏功能 5.MVC是否了解?介绍下使用情况。 6.MVC里面, View怎么通知到Model 7.了解delegate吗?并介绍">
+  
+    <link rel="alternative" href="/atom.xml" title="Jade&#39;s" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://o7rvtx931.bkt.clouddn.com/resizeApi.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://o7rvtx931.bkt.clouddn.com/5c6defebjw8epti0r9noaj20xc0y1n0x.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Jade</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">some time some tings</p>
+		
+
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/menu">目录</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/about">关于</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/imjade" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/2855196295/home?wvr=5" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/xiao-tao-36-64" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://weibo.com/u/2855196295/home?wvr=5">Jade于小涛</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">一个普通的不想普通程序员。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Jade</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://o7rvtx931.bkt.clouddn.com/5c6defebjw8epti0r9noaj20xc0y1n0x.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Jade</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">some time some tings</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/menu">目录</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/about">关于</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/imjade" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/2855196295/home?wvr=5" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/xiao-tao-36-64" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-iOS面试题汇总" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/posts/default/2016-05-31-iOS面试题汇总.html" class="article-date">
+  	<time datetime="2016-05-31T09:58:22.000Z" itemprop="datePublished">2016-05-31</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      iOS面试题汇总
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS面试题/">iOS面试题</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>群里边看到了有人分享了这篇面试题，拿来主义。。。
+</code></pre><p>#阿里一面</p>
+<p>1.<a href="/posts/uncategorized/2017-11-17-Android的activity.html">Android的activity</a></p>
+<p>2.<a href="http://" target="_blank" rel="noopener">Category支持添加属性与成员变量吗</a></p>
+<p>3.<a href="http://" target="_blank" rel="noopener">是否了解设计模式, 用过哪些</a></p>
+<p>4.<a href="http://" target="_blank" rel="noopener">iOS7之后, 蓝牙的围栏功能</a></p>
+<p>5.<a href="http://" target="_blank" rel="noopener">MVC是否了解?介绍下使用情况。</a></p>
+<p>6.<a href="http://" target="_blank" rel="noopener">MVC里面, View怎么通知到Model</a></p>
+<p>7.<a href="http://" target="_blank" rel="noopener">了解delegate吗?并介绍</a><br><a id="more"></a></p>
+<p>8.<a href="http://" target="_blank" rel="noopener">说说Cell重用原理</a></p>
+<p>9.<a href="http://" target="_blank" rel="noopener">异步下载如何实现</a></p>
+<p>10.<a href="http://" target="_blank" rel="noopener">做过最大的项目是什么?主要难点在哪里</a></p>
+<p>11.<a href="http://" target="_blank" rel="noopener">如果现在要实现一个下载功能, 你要如何设计。说说每个类具体做什么</a></p>
+<p>12.<a href="http://" target="_blank" rel="noopener">学过哪些语言</a></p>
+<p>13.<a href="http://" target="_blank" rel="noopener">C++里面虚函数作用</a></p>
+<p>14.<a href="http://" target="_blank" rel="noopener">对o2o有什么看法(他是o2o部门的)</a></p>
+<p>15.<a href="http://" target="_blank" rel="noopener">有没有什么想问的</a></p>
+<p>#阿里二面</p>
+<p>1.<a href="http://" target="_blank" rel="noopener">什么时候接触iOS</a></p>
+<p>2.<a href="http://" target="_blank" rel="noopener">你的这些项目是外包还是自己开发的</a></p>
+<p>3.<a href="http://" target="_blank" rel="noopener">OC允许多继承吗</a></p>
+<p>4.<a href="http://" target="_blank" rel="noopener">要用什么方式实现多继承</a></p>
+<p>5.<a href="http://" target="_blank" rel="noopener">了解内存管理吗, 吧唧吧唧…</a></p>
+<p>6.<a href="http://" target="_blank" rel="noopener">了解设计模式吗</a></p>
+<p>7.具体说说MVC</p>
+<p>8.了解KVO吗</p>
+<p>9.如果让你设计KVO, 要怎么设计</p>
+<p>10.现在你是如何适配的</p>
+<p>11.比较下storyboard和全代码</p>
+<p>12.印象比较深的项目, 难点在哪</p>
+<p>13.Cell重用机制具体怎么实现</p>
+<p>14.如果有1w张图片要在屏幕滚动显示(每张图片满屏), 至少要几个cell, 如何实现循环滚动</p>
+<p>15.平时是怎么进行测试的, 内存方面怎么测试</p>
+<p>16.平时如何实现网络请求, 一般返回的数据是什么格式, 如何解析..</p>
+<p>17.平时自己有没有封装过比较复杂的控件</p>
+<p>18.在什么情况使用Notification</p>
+<p>19.如何实现类似 “Find My iPhone” 这样功能</p>
+<p>#网易<br>1.自我介绍</p>
+<p>2.学习iOS动机</p>
+<p>3.对iOS的看法</p>
+<p>4.谈项目</p>
+<p>5.怎么看待审核被拒</p>
+<p>6.怎么完成后期检测, 优化</p>
+<p>7.id ,NSObject, id<nsobject>区别</nsobject></p>
+<p>8.了解iOS内存管理吗</p>
+<p>9.release 和 autorelease 区别</p>
+<p>10.autorelease 和 @autorelease区别</p>
+<p>11.weak什么时候用</p>
+<p>12.unsafe_unretained , weak, assign 区别</p>
+<p>13.__block什么时候用</p>
+<p>14.在block里面, 对数组执行添加操作, 这个数组需要声明成 __block吗</p>
+<p>15.在block里面, 对NSInteger进行修改, 这个NSInteger是否需要声明成__blcok</p>
+<p>16.了解循环引用吗</p>
+<p>17.NSThread, NSOperation, GCD区别</p>
+<p>18.如何在异步下载时候, 取消下载, 保证流量不浪费</p>
+<p>19.了解runtime吗</p>
+<p>20.runtime什么时候用</p>
+<p>21.通知和KVO区别</p>
+<p>22.有序和无序set实现原理区别</p>
+<p>23.深度遍历和广度遍历使用场景</p>
+<p>24.算法题 * 2</p>
+<p>25.常用的设计模式</p>
+<p>26.哪些设计模式属于观察者模式</p>
+<p>27.总结下刚才面试中哪些不足</p>
+<p>28.自己有什么优点</p>
+<p>29.有什么想问的</p>
+<p>#网易二面</p>
+<p>1.如何实现一个数组每个元素依次向右移动k位。(后头的往前面补) 比如: [1, 2, 3, 4, 5] 挪两位变成[4, 5, 1, 2, 3]</p>
+<p>2.实现连连看算法</p>
+<p>3.T9算法如何实现, 全拼算法</p>
+<p>#腾讯</p>
+<ol>
+<li>自我介绍</li>
+<li>如何保证软件质量, 怎么分析Crash日志</li>
+<li>Xcode集成的测试工具了解哪些</li>
+<li>如何获取应用数据</li>
+<li>是否接触过友盟</li>
+<li>是否了解Android</li>
+<li>你的个人主页是怎么写的</li>
+<li>谈谈你觉得最重要的一个项目</li>
+<li>谈谈你的xxx项目</li>
+<li>你这个项目里面集成了微信SDK, 谈谈使用感想</li>
+<li>假如我是一名初学者, 你会向我推荐哪些第三方库</li>
+<li>使用了第三方库, 有看他们是怎么实现的吗</li>
+<li>有没有看过大型项目的源码</li>
+<li>强连通量算法</li>
+<li>最短路径算法</li>
+<li>排序算法</li>
+<li>25个人, 每5人1个跑道, 最少经过几次赛跑, 得到前3名</li>
+</ol>
+<p>#腾讯二面</p>
+<p><strong>在线敲代码</strong></p>
+<p>1.求两个整数的最大公约数</p>
+<p>2.微信用户都是双向的好友，a是b的好友，那么b一定是a的。给定一个用户列表，有些用户是好友，有些不是，请判断，这些用户是否可以划分为两组，每组内的用 户，互相都不是好友。如果能，请给出这个划分。</p>
+<p>##建议: </p>
+<ol>
+<li>基础。 不管是哪个方向, 基础很重要。就比如iOS, objc的方方面面都必须了解。</li>
+<li>全面。 有些东西, 虽然不见得能答好, 但你至少应该懂。</li>
+<li>设计模式。 主流的那些设计模式非常有必要了解。</li>
+<li>算法。 这个不是说恶补能补好的。建议大家长期积累。 另外推荐&lt;剑指offer&gt;这本书。同时, 可以在这里线上答题: 牛客网-剑指offer</li>
+<li>简历一定要真实! 基本上面试官都是围绕简历展开交流的。 懂或不懂, 一问就知道, 没必要搬起石头砸自己的脚</li>
+<li>提前准备。 比如自我介绍, 项目介绍, 职业规划等等。基本都是必问的题目，能提前准备就提前准备好。</li>
+<li>开源, 分享, 积累。 我一直认为, 分享和开源是程序员进步的不二法门。 我建议每个程序员都应该有自己的Github, 有自己的博客。就这几次面试来说, 博客和Github帮了我多。 网易面试官直言, 他们认真看过我的Github, 微信HR问我要CSDN博客ID, 说她很感兴趣。帮助别人, 也是帮助自己。</li>
+<li>沟通。 有时候一个问题, 可能不懂, 甚至题目都不理解。不要害怕, 主动与面试官沟通。 我在网易面试的时候, 关于全拼算法的实现, 我当时连全拼都没一个完整的概念, 它要满足哪些条件更加不清楚。我跟面试官坦诚我不懂这个概念, 与他们的一步步沟通中实现了自己的算法。 所以沟通, 远比闷头写, 到头来还可能错误来的实在。</li>
+<li>自信。 能得到面试机会, 最起码证明, 你很优秀。 我觉得自信很重要。 如果一开始, 就表现的慌慌张张, 畏首畏尾, 那么不管是你自己的发挥, 还是面试官对你的看法, 我觉得都不会很好。</li>
+</ol>
+<p>##下边是我之前的总结的<br>1.内存问题</p>
+<pre><code>1.arc的内存问题 block内存问题 — 什么时候用weak
+1&gt;.循环引用都是strong会引起内存问题—&gt;strong变weak，assgin
+2&gt;.出现无线循环时候，—&gt;合适时候手动关闭循环
+3&gt;.arc 和mrc 混编时候 arc类在mrc使用要按照mrc规则  mrc类在arc使用要按照arc规则
+4&gt;.arc 只是帮助管理retain，release
+5&gt;.arc 把对象置nil后，对象没有指针指向，对象就会马上释放，用于释放对象
+6&gt;.arc Strong 对应retain 修饰强引用 weak 对应assgin 对象释放后自动置nil
+对象初始化默认修饰用__strong 对象指针默认修饰__autoreleaseing
+7&gt;.__autoreleasing 一般用于方法返回值时候默认添加的很少显示的添加
+8&gt;.不能使用NSAutoreleasePool 使用@autoreleasePool
+9&gt;.arc 中block内存问题，如果block中引用了某个对象会对该对象引用计数加1，所以如果block引用了某个对象要用__block或者__weak来修饰。
+10.&gt;CF*对象转换NS*对象时候要用__bridage 修饰符来桥接
+</code></pre><p>2.多线程 NSThread  GCD</p>
+<pre><code>1&gt;.NSThread
+比较轻量级 但是要自己管理生命周期线程同步，线程加锁lock\unlock  | NSCondition lock\unlock 也可以
+  @synchronized(obj) {} 互斥锁，obj 是要锁住的对象，｛｝是要锁的代码
+ 锁定一份代码只用一个互斥锁，多个是无效的
+       缺点是消耗大量CPU资源
+2&gt;. NSOperationQueue
+工作原理：底层GCD实现，初始化子类，添加到operationQueue中 重写main方法自己执行线程
+         可以设置并发线程数量
+        可以用 [queue cacelAllOperations];停止线程 suspend 暂停|resume重新开始
+3&gt;.GCD dispatch queue（官方推荐使用）
+工作原理：底层还是线程实现，让程序平行排队任务，根据可用处理资源，安排他们在任何可用处理器核心上执行任务。任务可以是一个函数，也可以是一个block。
+    dispatch_async 执行完通知主线程 可以设置线程优先级
+    dispatch_group_async 可以监听一组线程 全部完成后通知主线程
+    dispatch_barrier_async 前边的任务完成才会执行，而他后边的任务要等他完成才会执       行。
+    dispatch_apply 执行某代码片段N次
+</code></pre><p>3.weak 怎样置nil的 （weak 还是有一定性能消耗的）</p>
+<pre><code>建议是只在避免循环引用的时候使用__weak，一般在代理和block中使用
+当weak修饰的对象被释放时候，指针会被赋值为nil，然后调用objc_release,因为引用计数为0 调用dealloc方法。
+</code></pre><p>4.image 的imageName和imageWithContentsOfFile区别</p>
+<pre><code>imageName:使用时候系统会cache 程序员是无法处理cache的，所以多次使用该资源时候会提高性能，imageName会更好点
+imageWithContentsOfFile:使用时候后会马上释放 如果该资源只是用一两次可以使用这种方式
+</code></pre><p>5.image drawrect 的坐标切换</p>
+<pre><code>[image drawInRect:frame];
+</code></pre><p>6.设计模式</p>
+<pre><code>1&gt;.代理模式：
+ 优势 解耦合。Delegate
+2&gt;.观察者模式:
+ 优势 解耦合。KVO，NSNotification
+3&gt;.mvc模式：
+ 通过设计模型，控制器逻辑，视图展示将程序进行逻辑划分。
+ 优势 使系统层次清晰，逻辑分明
+4&gt;.单例模式：Singleton
+ 确保程序运行期间只有一份实例。
+ 优势 使用简单，延时求值，易于跨模块。
+5&gt;. 工厂模式：工厂类中自定了多个实例化对象接口，运行时候决定实例化哪个对象。
+工厂类包含了逻辑判断，可以根据条件动态生成实例化类。减少耦合。
+</code></pre><p>7.nonatomic 非原子性</p>
+<pre><code>atomic 原子性：给线程加锁。为了防止一个对象被多个线程同时使用，给线程加锁。因为atomic消耗比较大而iOS中很少有多个线程使用一个对象所以一般使用nonatomic
+</code></pre><p>8.线程安全</p>
+<pre><code>1&gt;.@synchronized(obj) {} 互斥锁
+ obj 是要锁住的对象，｛｝是要锁的代码
+        锁定一份代码只用一个互斥锁，多个是无效的
+        缺点是消耗大量CPU资源
+2&gt;.使用原子性atomic修饰属性 ：
+   线程安全，但是消耗大量CPU资源
+建议：所有属性使用nonatomic修饰，
+3&gt;. 线程锁：lock/unlock 条件锁：NSCondition lock/unlock
+4&gt;. GCD 线程安全：
+串行队列执行线程，dispatch_once(只执行一次)，dispatch_barriers_async(自定义并发队列)。
+5&gt;.NSOperationQueue 设置线程并发数量。
+总结：
+尽量减少多线程操作一块资源，尽量把加锁，抢占资源的操作交给服务器，减少客户端压力。
+</code></pre><p>9.数据库</p>
+<p>10、runtime 运行时机制</p>
+<pre><code>runtime 是一个C语言底层库。可以用来实现一些OC不好实现或者不能实现的操作。
+1&gt;.程序运行过程中，动态的创建一个类
+2&gt;.程序运行过程中，动态为某个类添加属性,方法，或者修改某个类方法
+3&gt;.遍历一个类中的所有属性或者方法
+4&gt;.相关函数：objc_msgSend:给一个类发送消息
+  class_copyMethodList:遍历一个类的所有方法
+  class_copyIvarList：遍历一个类的所有属性
+</code></pre><p>11.Clang</p>
+<p>12.arm架构 CPU指令集。</p>
+<p>13.autorelease pool</p>
+<pre><code>原理：对象添加autorelease pool 时候该对象内存地址会添加到autoreleasePoolPage的栈中的然后add一个标记（哨兵对象），然后release时候会从栈顶释放对象直到找到这个标记（哨兵对象）。
+嵌套autoreleasePool：Pop 时候释放到标记（哨兵对象）为止，所以嵌套autoreleasePool 互不影响。
+使用：1&gt;.新建线程时候。
+      2&gt;.for 循环里边有大量的临时变量。
+</code></pre><p>14.arc 内部原理 iOS5引入</p>
+<pre><code>1.前端编译器：自动为创建对象插入retain(objc_retain)/release (objc_release)
+2.arc 优化器 负责移除多余的retain/release语句
+</code></pre><p>15.UITableViewCell 优化</p>
+<pre><code>1&gt;.适当的复用cell
+2&gt;.缓存cell高度 不要在heightforrow 里边计算cell 高度
+3&gt;.避免设置cell子试图为透明，造成多次渲染
+4&gt;.避免使用图形特效，图形特性越多渲染越慢
+5&gt;.复杂的界面在drawrect里边利用GPU来绘制view 效率比add view 和xib 高
+6&gt;.减少逻辑计算时间
+</code></pre><p>17.KVO,Notification,Delegate 类之间通信区别</p>
+<pre><code>1&gt;.delegate 是一对一 通信，delegate 往往需要关注返回值
+2&gt;.Notification 一对多通信 不需要关心接收者，比KVO要多一步发送通知，但是范围广，更灵活点
+3&gt;.KVO 一对多通信 ，不需要关心接收者，但是局限于属性变化的
+4&gt;.属性传值：不灵活
+5&gt;.将类整个传过去：不灵活，容易解耦
+6&gt;.init方法传值
+</code></pre><p>18.本地数据库海量数据怎么提高查询效率，和存储效率</p>
+<pre><code>1&gt;.避免全表查询：进行分表，外链查询，
+2&gt;. 在设计where order by 的列上建立索引(一种排序的数据结构，以快速查询，更新数据库数据)。
+</code></pre><p>19.索引的缺点</p>
+<pre><code>1&gt;.增加了数据库的存储空间。
+2&gt;.添加和修改数据的时候花费较多的时间(因为索引也要跟着改变)。
+</code></pre><p>20.断点续传方案</p>
+<pre><code>1&gt;.下载前，判断已经下载好的字节长度。
+2&gt;.下载时，根据之前下载好的字节长度，从后边字节开始继续下载。
+ASIHttpRequest 方法 setAllowResumeForFileDownloads
+</code></pre><p>21.冒泡排序<br>   NSInteger count = sortArray.count;</p>
+<pre><code>for (NSInteger i = 1; i &lt;= count; i ++) {
+
+    for (NSInteger j = 0; j &lt; i; j ++) {
+
+        if(j + 1 &lt; count) {
+
+            if ([sortArray[j] integerValue] &gt; [sortArray[j + 1] integerValue] ) {
+
+                [sortArray exchangeObjectAtIndex:j withObjectAtIndex:j + 1];}} }}
+</code></pre><p>22.PUSH原理 PUSH证书不能是带*号的证书</p>
+<pre><code>1&gt;.后台服务器将要发送的消息和iPhone的设备号一起发送到APNS服务器
+2&gt;.APNS在已注册的iPhone的设备列表中找到改设备号的iPhone，并发送消息到该iPhone
+3&gt;.iPhone收到消息后传送到对应的应用，弹出push
+</code></pre><p>23.socket 编程</p>
+<pre><code>1&gt;.TCP：传输层 连接需要三次握手，长连接，断开时需要四次握手
+2&gt;.HTTP：应用层 每次都请求都需要服务器回应，处理完后断开连接，称作“一次连接”，“短连接”
+3&gt;.TCP/UDP区别：
+TCP：面向连接，通信安全，传输数据可靠，速度慢，系统开销比较大。
+UDP：面向非连接，传输不可靠，用于少量数据传输，速度快
+</code></pre><p>4&gt;.socket：套接字 是TCP/IP协议软件族通信的软件抽象层，它是一组借口。</p>
+<pre><code>工作原理：
+1&gt;. 服务端：socket 函数生成一个socket，bind函数将本机ip地址和端口绑定，然后调用listen函数对相应socket监听，当accept接收到一个连接请求时，将生成一个新的socket，服务器显示该请求ip地址，并发送新的socket到客户端“im，sever”，关闭socket。
+2&gt;. 客户端：调用socket生成一个socket，bind函数将本地ip地址和端口绑定，然后请求连接服务器，通过新的socket发送消息“im client”，关闭socket。
+3&gt;.连接时可以指定通信协议，scoket可以支持不同的通信协议（TCP/UDP）当TCP协议连接时 该socket连接就是TCP连接。
+</code></pre><p>24.NSRunLoop： iOS消息机制处理模式。</p>
+<pre><code>作用：控制NSRunloop里边线程的执行和休眠。
+</code></pre>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/posts/default/2016-06-06-CocoaPods.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          CocoaPods
+        
+      </div>
+    </a>
+  
+  
+    <a href="/posts/default/2016-05-26-Framework-开发的那些事.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Framework 开发的那些事</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="iOS面试题汇总" data-title="iOS面试题汇总" data-url="http://imjade.github.io/posts/default/2016-05-31-iOS面试题汇总.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"imjade"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Jade
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

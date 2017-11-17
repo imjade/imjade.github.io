@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>iOS记录 | Jade&#39;s</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1开发时遇到的一些问题，记录下...  Jenkins 搭建（Mac 环境） Apple Pay的开发设置 根据内存地址定位错误 view切圆角 时间戳（毫秒）转date NSDataDetector iOS10 国行设备访问网络权限问题 NSTimer、CADisplayLink、GCD 三种定时器的用法 const">
+<meta property="og:type" content="website">
+<meta property="og:title" content="iOS记录">
+<meta property="og:url" content="http://imjade.github.io/menu/ios/index.html">
+<meta property="og:site_name" content="Jade&#39;s">
+<meta property="og:description" content="1开发时遇到的一些问题，记录下...  Jenkins 搭建（Mac 环境） Apple Pay的开发设置 根据内存地址定位错误 view切圆角 时间戳（毫秒）转date NSDataDetector iOS10 国行设备访问网络权限问题 NSTimer、CADisplayLink、GCD 三种定时器的用法 const static extern IPA Automatic Resign 关于bl">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-17T05:50:11.202Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS记录">
+<meta name="twitter:description" content="1开发时遇到的一些问题，记录下...  Jenkins 搭建（Mac 环境） Apple Pay的开发设置 根据内存地址定位错误 view切圆角 时间戳（毫秒）转date NSDataDetector iOS10 国行设备访问网络权限问题 NSTimer、CADisplayLink、GCD 三种定时器的用法 const static extern IPA Automatic Resign 关于bl">
+  
+    <link rel="alternative" href="/atom.xml" title="Jade&#39;s" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://o7rvtx931.bkt.clouddn.com/resizeApi.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://o7rvtx931.bkt.clouddn.com/5c6defebjw8epti0r9noaj20xc0y1n0x.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Jade</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">some time some tings</p>
+		
+
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/menu">目录</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/about">关于</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/imjade" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/2855196295/home?wvr=5" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/xiao-tao-36-64" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://weibo.com/u/2855196295/home?wvr=5">Jade于小涛</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">一个普通的不想普通程序员。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Jade</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://o7rvtx931.bkt.clouddn.com/5c6defebjw8epti0r9noaj20xc0y1n0x.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Jade</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">some time some tings</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/menu">目录</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/about">关于</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/imjade" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/2855196295/home?wvr=5" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/xiao-tao-36-64" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/menu/ios/index.html" class="article-date">
+  	<time datetime="2017-11-16T15:15:38.000Z" itemprop="datePublished">2017-11-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      iOS记录
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">开发时遇到的一些问题，记录下...</span><br></pre></td></tr></table></figure>
+<ol>
+<li><a href="/posts/default/2016-12-06-Jenkins-搭建（Mac-环境）.html">Jenkins 搭建（Mac 环境）</a></li>
+<li><a href="/posts/default/2016-12-06-Apple-Pay的开发设置.html">Apple Pay的开发设置</a></li>
+<li><a href="/posts/default/2016-12-06-根据内存地址定位错误.html">根据内存地址定位错误</a></li>
+<li><a href="/posts/default/2016-12-06-view切圆角.html">view切圆角</a></li>
+<li><a href="/posts/default/2016-12-06-时间戳（毫秒）转date.html">时间戳（毫秒）转date</a></li>
+<li><a href="/posts/default/2016-12-06-NSDataDetector.html">NSDataDetector</a></li>
+<li><a href="/posts/default/2016-12-06-iOS10国行设备访问网络权限问题.html">iOS10 国行设备访问网络权限问题</a></li>
+<li><a href="/posts/default/2016-07-15-NSTimer、CADisplayLink、GCD-三种定时器的用法.html">NSTimer、CADisplayLink、GCD 三种定时器的用法</a></li>
+<li><a href="/posts/default/2016-07-14-const-static-extern.html">const static extern</a></li>
+<li><a href="/posts/default/2016-07-14-IPA-Resign.html">IPA Automatic Resign</a></li>
+<li><a href="/posts/default/2016-06-18-关于block.html">关于block</a></li>
+<li><a href="/posts/default/2016-06-15-JS与OC交互.html">JS与OC交互</a></li>
+<li><a href="/posts/default/2016-06-06-一个问题.html">一个问题</a></li>
+<li><a href="/posts/default/2016-06-06-CocoaPods.html">CocoaPods</a></li>
+<li><a href="/posts/default/2016-05-31-iOS面试题汇总.html">iOS面试题汇总</a></li>
+<li><a href="/posts/default/2016-05-26-Framework-开发的那些事.html">Framework 开发的那些事</a></li>
+<li><a href="/posts/default/2016-05-26-磕磕碰碰2-1.html">磕磕碰碰2.1</a></li>
+<li><a href="/posts/default/2016-05-16-hello.html">ios Framework 合并</a></li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+  
+    
+  
+</article>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="undefined" data-title="iOS记录" data-url="http://imjade.github.io/menu/ios/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"imjade"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Jade
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: false,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
