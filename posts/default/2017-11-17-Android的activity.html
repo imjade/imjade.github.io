@@ -6,18 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Android的activity | Jade&#39;s</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This is My Home. 写些技术的，聊点家常的。">
-<meta name="keywords" content="iOS 记录">
+  <meta name="description" content="Activity 是什么   简述： 123Activity 是一个应用组件，用户可与其提供的屏幕进行交互，以执行拨打电话、拍摄照片、发送电子邮件或查看地图等操作。每个 Activity 都会获得一个用于绘制其用户界面的窗口。窗口通常会充满屏幕，但也可小于屏幕并浮动在其他窗口之上。(类似UIViewController">
+<meta name="keywords" content="Android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android的activity">
 <meta property="og:url" content="http://imjade.github.io/posts/default/2017-11-17-Android的activity.html">
 <meta property="og:site_name" content="Jade&#39;s">
-<meta property="og:description" content="This is My Home. 写些技术的，聊点家常的。">
+<meta property="og:description" content="Activity 是什么   简述： 123Activity 是一个应用组件，用户可与其提供的屏幕进行交互，以执行拨打电话、拍摄照片、发送电子邮件或查看地图等操作。每个 Activity 都会获得一个用于绘制其用户界面的窗口。窗口通常会充满屏幕，但也可小于屏幕并浮动在其他窗口之上。(类似UIViewController)  创建：创建Activity必须要在AndroidManifest.xml">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-17T04:08:57.395Z">
+<meta property="og:image" content="http://developments.qiniudn.com/activity_lifecycle.png">
+<meta property="og:updated_time" content="2017-11-19T14:56:46.120Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android的activity">
-<meta name="twitter:description" content="This is My Home. 写些技术的，聊点家常的。">
+<meta name="twitter:description" content="Activity 是什么   简述： 123Activity 是一个应用组件，用户可与其提供的屏幕进行交互，以执行拨打电话、拍摄照片、发送电子邮件或查看地图等操作。每个 Activity 都会获得一个用于绘制其用户界面的窗口。窗口通常会充满屏幕，但也可小于屏幕并浮动在其他窗口之上。(类似UIViewController)  创建：创建Activity必须要在AndroidManifest.xml">
+<meta name="twitter:image" content="http://developments.qiniudn.com/activity_lifecycle.png">
   
     <link rel="alternative" href="/atom.xml" title="Jade&#39;s" type="application/atom+xml">
   
@@ -173,7 +175,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-记录/">iOS 记录</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
 	</div>
 
         
@@ -184,7 +186,43 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <ol>
+<li>Activity 是什么</li>
+</ol>
+<ul>
+<li><p>简述：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Activity 是一个应用组件，用户可与其提供的屏幕进行交互，以执行拨打电话、拍摄照片、发送电子邮件或查看地图等操作。</span><br><span class="line">每个 Activity 都会获得一个用于绘制其用户界面的窗口。窗口通常会充满屏幕，但也可小于屏幕并浮动在其他窗口之上。</span><br><span class="line">(类似UIViewController)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建：创建Activity必须要在AndroidManifest.xml声明Activity。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;manifest ... &gt;</span><br><span class="line">  &lt;application ... &gt;</span><br><span class="line">      &lt;activity android:name=&quot;.ExampleActivity&quot; /&gt;</span><br><span class="line">      ...</span><br><span class="line">  &lt;/application ... &gt;</span><br><span class="line">  ...</span><br><span class="line">&lt;/manifest &gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置intent-filter：创建项目时，自动创建 默认启动的MainActivity。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;activity android:name=&quot;.MainActivity&quot; android:icon=&quot;@drawable/app_icon&quot;&gt;</span><br><span class="line">    &lt;intent-filter&gt;</span><br><span class="line">        &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;</span><br><span class="line">        &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;</span><br><span class="line">    &lt;/intent-filter&gt;</span><br><span class="line">&lt;/activity&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>Activity 启动：</li>
+</ol>
+<ul>
+<li><p>无回调：startActivity()。ExampleActivity是要启动的Activity</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Intent intent = new Intent(this, ExampleActivity.class);</span><br><span class="line">startActivity(intent);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有回调：startActivityForResult()。需实现回调：onActivityResult</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">ExampleRequestCode = 2;//请求码：用于区分哪个Activity的回调</span><br><span class="line"></span><br><span class="line">Intent intent = new Intent(this, ExampleActivity.class);</span><br><span class="line">startActivityForResult(intent,ExampleRequestCode);</span><br><span class="line"></span><br><span class="line">@Override  </span><br><span class="line">protected void onActivityResult(int requestCode, int resultCode, Intent data) &#123;  </span><br><span class="line">    super.onActivityResult(requestCode, resultCode, data);  </span><br><span class="line">    if (requestCode == ExampleRequestCode &amp;&amp; resultCode == Activity.RESULT_OK) &#123;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">-- ExampleActivity--</span><br><span class="line">resultCode = 1;//结果码：用于区分回调方法的状态</span><br><span class="line">void finishActivity() &#123;  </span><br><span class="line">    Intent intent = new Intent();  </span><br><span class="line">    intent.putExtra(&quot;param&quot;, &quot;1&quot;);  </span><br><span class="line">    setResult(resultCode,intent);  </span><br><span class="line">    finish();  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>传值：启动时可以用Intent和bundle传参数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">-- Intent -- </span><br><span class="line">Intent intent = new Intent(this, ExampleActivity.class);</span><br><span class="line">intent.putExtra(&quot;age&quot;, 25);</span><br><span class="line">intent.putExtra(&quot;address&quot;, &quot;guangzhou&quot;);</span><br><span class="line">startActivity(intent);</span><br><span class="line"></span><br><span class="line">ExampleActivity:</span><br><span class="line">Intent intent = getIntent();  </span><br><span class="line">int age = intent.getIntExtra(&quot;age&quot;,0);  </span><br><span class="line">String addressString = intent.getStringExtra(&quot;address&quot;);</span><br><span class="line"></span><br><span class="line">-- Bundle -- </span><br><span class="line">Intent intent = new Intent(this, ExampleActivity.class);</span><br><span class="line">Bundle bundle = new Bundle();</span><br><span class="line">bundle.putInt(&quot;age&quot;, 25);</span><br><span class="line">bundle.putString(&quot;address&quot;, &quot;guangzhou&quot;);</span><br><span class="line">intent.putExtras(bundle); </span><br><span class="line">startActivity(intent);</span><br><span class="line"></span><br><span class="line">ExampleActivity:</span><br><span class="line">Intent intent = getIntent(); </span><br><span class="line">Bundle bundle = intent.getExtras(); </span><br><span class="line">int age = bundle.getInt(&quot;age&quot;); </span><br><span class="line">String addressString = bundle.getString(&quot;address&quot;);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li><p>Activity 结束/关闭：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">finish(); //关闭当前页面</span><br><span class="line">Activity.finish();//关闭某个Activity</span><br><span class="line">System.exit(0); //退出程序</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Activity生命周期：</p>
+</li>
+</ol>
+<p><img src="http://developments.qiniudn.com/activity_lifecycle.png" alt="Activity生命周期"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">public class ExampleActivity extends Activity &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        // The activity is being created.</span><br><span class="line">        //首次创建 Activity 时调用。 您应该在此方法中执行所有正常的静态设置 — 创建视图、将数据绑定到列表等等(ViewDidLoad)</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onReStart() &#123;</span><br><span class="line">        super.onStart();</span><br><span class="line">        //在 Activity 已停止并即将再次启动前调用。</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onStart() &#123;</span><br><span class="line">        super.onStart();</span><br><span class="line">        // The activity is about to become visible.</span><br><span class="line">        //在 Activity 即将对用户可见之前调用。(ViewWillAppear)</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onResume() &#123;</span><br><span class="line">        super.onResume();</span><br><span class="line">        // The activity has become visible (it is now &quot;resumed&quot;).</span><br><span class="line">        //在 Activity 即将开始与用户进行交互之前调用。(ViewDidAppear)</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onPause() &#123;</span><br><span class="line">        super.onPause();</span><br><span class="line">        // Another activity is taking focus (this activity is about to be &quot;paused&quot;).</span><br><span class="line">        //当系统即将开始继续另一个 Activity 时调用。</span><br><span class="line">        此方法通常用于确认对持久性数据的未保存更改、停止动画以及其他可能消耗 CPU 的内容，诸如此类。</span><br><span class="line">        (ViewWillDisAppear)</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onStop() &#123;</span><br><span class="line">        super.onStop();</span><br><span class="line">        // The activity is no longer visible (it is now &quot;stopped&quot;)</span><br><span class="line">        //在 Activity 对用户不再可见时调用。(ViewDidDisAppear)</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onDestroy() &#123;</span><br><span class="line">        super.onDestroy();</span><br><span class="line">        // The activity is about to be destroyed.</span><br><span class="line">        //在 Activity 被销毁前调用.(dealloc)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
