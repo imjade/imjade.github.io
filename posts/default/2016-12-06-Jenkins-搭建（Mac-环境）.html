@@ -14,17 +14,17 @@
 <meta property="og:site_name" content="Jade&#39;s">
 <meta property="og:description" content="1.安装Jenkins 两种方式  http://jenkins-ci.org/  下载pgk文件直接点击安装(不推荐)。（安装目录：/Users/Shared/Jenkins/下，因为Xcode默认安装在/Users/登录用户/，会有很多操作权限的问题） 用Homebrew安装 （推荐）。首先要安装Homebrew（http://brew.sh/）==修默认安装到/Users/登录用户/ 所以要">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/15563282.png">
-<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/9781674.png">
-<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/3462242.png">
-<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/untitled.png">
-<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/untitled2.png">
-<meta property="og:image" content="http://o7rvtx931.bkt.clouddn.com/untitled3.png">
+<meta property="og:image" content="http://qiniu.hexo.jiantuzhi.com/15563282.png">
+<meta property="og:image" content="http://qiniu.hexo.jiantuzhi.com/9781674.png">
+<meta property="og:image" content="http://qiniu.hexo.jiantuzhi.com/3462242.png">
+<meta property="og:image" content="http://qiniu.hexo.jiantuzhi.com/untitled.png">
+<meta property="og:image" content="http://qiniu.hexo.jiantuzhi.com/untitled2.png">
+<meta property="og:image" content="http://qiniu.hexo.jiantuzhi.com/untitled3.png">
 <meta property="og:updated_time" content="2017-11-17T02:23:17.232Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jenkins 搭建（Mac 环境）">
 <meta name="twitter:description" content="1.安装Jenkins 两种方式  http://jenkins-ci.org/  下载pgk文件直接点击安装(不推荐)。（安装目录：/Users/Shared/Jenkins/下，因为Xcode默认安装在/Users/登录用户/，会有很多操作权限的问题） 用Homebrew安装 （推荐）。首先要安装Homebrew（http://brew.sh/）==修默认安装到/Users/登录用户/ 所以要">
-<meta name="twitter:image" content="http://o7rvtx931.bkt.clouddn.com/15563282.png">
+<meta name="twitter:image" content="http://qiniu.hexo.jiantuzhi.com/15563282.png">
   
     <link rel="alternative" href="/atom.xml" title="Jade&#39;s" type="application/atom+xml">
   
@@ -42,7 +42,7 @@
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
-			<img lazy-src="http://o7rvtx931.bkt.clouddn.com/5c6defebjw8epti0r9noaj20xc0y1n0x.jpg" class="js-avatar">
+			<img lazy-src="http://qiniu.hexo.jiantuzhi.com/5c6defebjw8epti0r9noaj20xc0y1n0x.jpg" class="js-avatar">
 			
 		</a>
 
@@ -118,7 +118,7 @@
 		<header id="header" class="inner">
 			<div class="profilepic">
 			
-				<img lazy-src="http://o7rvtx931.bkt.clouddn.com/5c6defebjw8epti0r9noaj20xc0y1n0x.jpg" class="js-avatar">
+				<img lazy-src="http://qiniu.hexo.jiantuzhi.com/5c6defebjw8epti0r9noaj20xc0y1n0x.jpg" class="js-avatar">
 			
 			</div>
 			<hgroup>
@@ -209,22 +209,22 @@
 <ul>
 <li>新建item -&gt;  填写item名称 -&gt; 选择构建类型  -&gt; ok</li>
 </ul>
-<p><img src="http://o7rvtx931.bkt.clouddn.com/15563282.png" alt="图1"></p>
+<p><img src="http://qiniu.hexo.jiantuzhi.com/15563282.png" alt="图1"></p>
 <ul>
 <li><p>配置Job。</p>
 <p><code>1.源码管理 -&gt; 选中Git -&gt; 填写Git地址 -&gt; 填写构建Git分支</code></p>
 </li>
 </ul>
-<p><img src="http://o7rvtx931.bkt.clouddn.com/9781674.png" alt="图2"></p>
+<p><img src="http://qiniu.hexo.jiantuzhi.com/9781674.png" alt="图2"></p>
 <p><code>2.构建触发器 -&gt; 选中Build when a change is pushed to GitHub -&gt; Poll SCM（每晚9点检查Github有代码更新build）。</code></p>
-<p><img src="http://o7rvtx931.bkt.clouddn.com/3462242.png" alt="图3"></p>
+<p><img src="http://qiniu.hexo.jiantuzhi.com/3462242.png" alt="图3"></p>
 <p><code>3.增加构建步骤 -&gt; 选择Xcode -&gt; General build settings</code></p>
-<p><img src="http://o7rvtx931.bkt.clouddn.com/untitled.png" alt="图4"></p>
+<p><img src="http://qiniu.hexo.jiantuzhi.com/untitled.png" alt="图4"></p>
 <p><code>4.增加构建步骤 -&gt; 选择Xcode -&gt; Advanced Xcode build options （Workspace项目）。</code></p>
-<p><img src="http://o7rvtx931.bkt.clouddn.com/untitled2.png" alt="图5"></p>
+<p><img src="http://qiniu.hexo.jiantuzhi.com/untitled2.png" alt="图5"></p>
 <p><code>5.增加构建后操作步骤 -&gt; Execute a set of scripts -&gt; Add Build Step   （打包成功后执行脚本文件，上传文件到蒲公英，并邮件通知）</code></p>
 <p><a href="https://github.com/caiwenshu/CI_pgy/blob/master/pgy_upload_temp.py" target="_blank" rel="noopener">https://github.com/caiwenshu/CI_pgy/blob/master/pgy_upload_temp.py</a></p>
-<p><img src="http://o7rvtx931.bkt.clouddn.com/untitled3.png" alt="图6"></p>
+<p><img src="http://qiniu.hexo.jiantuzhi.com/untitled3.png" alt="图6"></p>
 <p><em>5.立即构建。</em></p>
 <p>   通过点击刚创建的项目 -&gt; 立即构建 （构建成功后会受到邮件通知）。</p>
 <p><code>注： 如果我们需要在非本机以外的电脑上访问 Jenkins，那么需要改一下配置文件（/usr/local/opt/jenkins-lts/homebrew.mxcl.jenkins.plist）在，修改httpListenAddress 后的 ip 地址127.0.0.1修改为本机ip。</code></p>
